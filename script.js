@@ -1,4 +1,5 @@
 let selection = Splitting()
+console.log(selection)
 const sect2 = document.querySelector(".secteur2")
 const nuage1 = document.querySelector(".nuage1")
 const nuage2 = document.querySelector(".nuage2")
