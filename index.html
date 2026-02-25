@@ -35,32 +35,42 @@
         </div>
         <div class="sect-1-1">
             <p style=" color: #FFF9E7; font-family: DxKord; text-align: center; font-size: 60px; letter-spacing: 1px; margin-top:75px;">ON FAIT DES SITES ET D'AUTRES TRUCS...</p>
-            <img src="./test-bonhomme.png" alt="" style="width:230px; position: absolute; right:20px; top:620px; margin-left: 10px;">
+            <img src="./test-bonhomme.PNG" alt="" style="width:230px; position: absolute; right:20px; top:620px; margin-left: 10px;">
             <button class="btn-1">ON EN DISCUTE ?</button>
         </div>
     </section>
     <section class="secteur2">
-        <h2>NOTRE EXPERTISE</h2>
-        <div class="sect-2">
-            <div class="card card1">
-                <p style="color: #FFF9E7; font-family: DxKord; font-size: 48px; margin:0">ON GÈRE VOS CAMPAGNE ADS</p>
-            </div>
-            <div class="card card2">
-                <p style="color: #FFF9E7; font-family: DxKord; font-size: 48px; margin:0">ON CRÉER VOTRE SITE WEB</p>
-            </div>
-            <div class="card card3">
-                <p style="color: #FFF9E7; font-family: DxKord; font-size: 48px; margin:0">ON FAIT EXPLOSER VOTRE VISIBILITÉ</p>
-            </div>
-        </div>
-    </section>
-
-    <div class="transi-sect23">
-        <svg width="491" height="316" viewBox="0 0 491 316" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <path d="M0 204.368L70.9403 74.0761C137.442 -48.0641 321.75 -11.3351 336.351 126.967L491 315.368H100L0 204.368Z" fill="#FFF9E7"/>
+        <svg style="width:105vw; position: absolute; top:58vh; left:-5vw;" viewBox="0 0 2042 781" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <g filter="url(#filter0_d_53_1235)">
+        <path d="M511 682.233L573.632 595.296C670.278 461.145 881.516 517.735 898.156 682.233L991 780H632.374L511 682.233Z" fill="#FFF9E7"/>
+        <path d="M1171 674.632C1208.94 480.283 1477.67 456.997 1548.48 641.924L1561 674.632V781H1171V674.632Z" fill="#FFF9E7"/>
+        <path d="M1894 674.632C1931.94 480.283 2200.67 456.997 2271.48 641.924L2284 674.632V781H1894V674.632Z" fill="#FFF9E7"/>
+        <path d="M1530 674.614L1532.56 662.775C1570.88 485.438 1787.95 417.632 1920.4 541.631L2022 674.614L1920.4 781H1530V674.614Z" fill="#FFF9E7"/>
+        <path d="M-62 673.727L-46.8308 623.919C2.67998 461.35 226.605 445.516 298.5 599.5L328 780H-62V673.727Z" fill="#FFF9E7"/>
+        <path d="M826 674.391C902.466 561.625 1059.98 540.362 1163.61 628.816L1217 674.391V781H826V674.391Z" fill="#FFF9E7"/>
+        <path d="M228 670L298.94 539.708C365.442 417.568 549.75 454.297 564.351 592.599L719 781H328L228 670Z" fill="#FFF9E7"/>
+        </g>
+        <defs>
+        <filter id="filter0_d_53_1235" x="-72.5" y="408.132" width="2367" height="372.868" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+        <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+        <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+        <feOffset dy="-47"/>
+        <feGaussianBlur stdDeviation="5.25"/>
+        <feComposite in2="hardAlpha" operator="out"/>
+        <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"/>
+        <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_53_1235"/>
+        <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_53_1235" result="shape"/>
+        </filter>
+        </defs>
         </svg>
-    </div>
 
-    <section>
+        <div class="container-sect2">
+            <p style="font-family: DxKord; font-size: 120px; letter-spacing: 3px; margin-top:10vh; width: 80vw; margin-left: 10vw; opacity: 0.2; color:#D41618;">
+                LE LABO EST UNE AGENCE CRÉATIVE QUI METS L'ACCENT SUR LA PERFORMANCE
+            </p>
+            
+        </div>
+
 
     </section>
     
@@ -78,15 +88,7 @@
     body {
         background-color: #D41618;
         font-family: Arial, Helvetica, sans-serif;
-    }
-
-    h2 {
-        color: #FFF9E7; 
-        font-family: DxKord; 
-        font-size: 80px; 
-        letter-spacing: 3px; 
-        margin-top:100px;
-        margin-left: 20px;
+        overflow-x : hidden;
     }
 
     header {
@@ -105,7 +107,6 @@
         top:60px;
         margin: auto;
         border: solid 2px black;
-        
     }
 
     .liens {
@@ -136,14 +137,10 @@
     .sect-1 {
         display: grid;
         height: 400px;
-        width: 100%;
+        width: 100vw;
         grid-template-columns: repeat(20,1fr);
         grid-template-rows: 100px 100px 100px 100px;
-        margin-top: 160px;
-    }
-
-    .test {
-        background-color: aliceblue;
+        margin-top: 25vh;
     }
 
     .nuage {
@@ -187,9 +184,21 @@
         padding: 50px 20px;
     }
 
-    .transi-sect23 {
-        
+    .secteur2 {
+        margin-top: 0;
+        width: 100vw;
+        height:250vh;
+        margin-left: 0;
+        padding: 0;
     }
 
+    .container-sect2 {
+        position: absolute;
+        background-color: #FFF9E7;
+        width: 100vw;
+        height:200vh;
+        margin-top:33vh;
+        left: 0;
+    }
 
 </style>
