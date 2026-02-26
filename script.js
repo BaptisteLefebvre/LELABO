@@ -14,6 +14,9 @@ let cards = document.querySelectorAll(".card-transi")
 const sectservices = document.querySelector(".secteur4")
 let cardservices = document.querySelectorAll(".card-service-transi")
 
+const sectmethod = document.querySelector(".secteur5")
+let cardmethods = document.querySelectorAll(".cardmethod-transi")
+
 gsap.registerPlugin(ScrollTrigger)
 
 gsap.to(nuage1, {
@@ -77,7 +80,6 @@ gsap.from(selection2[0].words, {
         trigger: ".test-reveal2",
         scrub: true,
         end : "top 20%",
-        markers: true,
     }
 })
 
@@ -98,6 +100,18 @@ gsap.from(cardservices, {
     stagger : 0.5,
     scrollTrigger : {
         trigger : '.secteur4',
+        start: "top top",
+        end: "+=3000",
+        scrub : true,
+        pin: true,
+    }
+})
+
+gsap.from(cardmethods, {
+    xPercent: 150,
+    stagger : 0.5,
+    scrollTrigger : {
+        trigger : '.secteur5',
         start: "top top",
         end: "+=3000",
         scrub : true,
