@@ -1,5 +1,8 @@
-let selection = Splitting()
-console.log(selection)
+const testreveal = document.querySelector(".test-reveal")
+let selection = Splitting({ target:testreveal})
+const testreveal2 = document.querySelector(".test-reveal2")
+let selection2 = Splitting({ target:testreveal2})
+
 const sect2 = document.querySelector(".secteur2")
 const nuage1 = document.querySelector(".nuage1")
 const nuage2 = document.querySelector(".nuage2")
@@ -7,7 +10,6 @@ const nuage3 = document.querySelector(".nuage3")
 const nuage4 = document.querySelector(".nuage4")
 const sectcards = document.querySelector(".cards")
 let cards = document.querySelectorAll(".card")
-console.log(cards)
 
 gsap.registerPlugin(ScrollTrigger)
 
@@ -65,6 +67,17 @@ gsap.from(selection[0].words, {
     }
 })
 
+gsap.from(selection2[0].words, {
+    color: "rgb(255,249,231,0.2)",
+    stagger: 0.5,
+    scrollTrigger: {
+        trigger: ".test-reveal2",
+        scrub: true,
+        end : "top 20%",
+        markers: true,
+    }
+})
+
 gsap.from(cards, {
     yPercent: 200,
     stagger : 1,
@@ -72,7 +85,6 @@ gsap.from(cards, {
         trigger : '.container2-sect2',
         start: "top top",
         end: "+=3000",
-        markers: true,
         scrub : true,
         pin: true,
         rotate: true,
