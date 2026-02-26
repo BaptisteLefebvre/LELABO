@@ -9,7 +9,10 @@ const nuage2 = document.querySelector(".nuage2")
 const nuage3 = document.querySelector(".nuage3")
 const nuage4 = document.querySelector(".nuage4")
 const sectcards = document.querySelector(".cards")
-let cards = document.querySelectorAll(".card")
+let cards = document.querySelectorAll(".card-transi")
+
+const sectservices = document.querySelector(".secteur4")
+let cardservices = document.querySelectorAll(".card-service-transi")
 
 gsap.registerPlugin(ScrollTrigger)
 
@@ -87,6 +90,17 @@ gsap.from(cards, {
         end: "+=3000",
         scrub : true,
         pin: true,
-        rotate: true,
+    }
+})
+
+gsap.from(cardservices, {
+    yPercent: 150,
+    stagger : 0.5,
+    scrollTrigger : {
+        trigger : '.secteur4',
+        start: "top top",
+        end: "+=3000",
+        scrub : true,
+        pin: true,
     }
 })
