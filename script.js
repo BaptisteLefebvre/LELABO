@@ -3,6 +3,11 @@ let selection = Splitting({ target:testreveal})
 const testreveal2 = document.querySelector(".test-reveal2")
 let selection2 = Splitting({ target:testreveal2})
 
+const btn_nav_activ = document.querySelector(".activ_nav")
+const btn_nav_hide = document.querySelector(".hidenav")
+const div_nav = document.getElementById("background-navbar")
+const navbar = document.getElementById("navbar")
+
 const sect2 = document.querySelector(".secteur2")
 const nuage1 = document.querySelector(".nuage1")
 const nuage2 = document.querySelector(".nuage2")
@@ -18,6 +23,22 @@ const sectmethod = document.querySelector(".secteur5")
 let cardmethods = document.querySelectorAll(".cardmethod-transi")
 
 gsap.registerPlugin(ScrollTrigger)
+
+btn_nav_hide.addEventListener("click", () => {
+    navbar.classList.remove("open")
+    setTimeout(() => {
+        div_nav.classList.remove("open")
+    }, 300);
+})
+
+btn_nav_activ.addEventListener("click", () => {
+    div_nav.classList.add("open")
+    setTimeout(() => {
+        navbar.classList.add("open")
+    }, 300);
+ 
+})
+
 
 gsap.to(nuage1, {
     xPercent : -100,

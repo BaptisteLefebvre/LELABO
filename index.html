@@ -6,26 +6,447 @@
     <link rel="stylesheet" href="https://unpkg.com/splitting/dist/splitting.css" />
     <title>Le Labo</title>
 </head>
+<style>
+    @font-face {
+        font-family: DxKord;
+        src: url(./FREE/DxKord-InktrapUltraExpanded.otf);
+    }
+
+    @font-face {
+        font-family: DxKordExp;
+        src: url(./FREE/DxKord-InktrapExpanded.otf);
+    }
+
+    body {
+        background-color: #F61F1F;
+        font-family: Arial, Helvetica, sans-serif;
+        overflow-x : hidden;
+        margin: 0;
+    }
+
+    .activ_nav {
+        width: 30vw;
+        height: fit-content;
+        background-color: #181819;
+        color: #FFF9E7; 
+        font-family: DxKord; 
+        text-align: center;
+        font-size: 45px;
+        position: fixed;
+        left:75vw;
+        rotate: calc(18deg);
+        top:2vh;
+        z-index: 11;
+    }
+
+    .activ_nav:hover {
+        cursor: pointer;
+    }
+
+    .navigation {
+        width: 100vw;
+        height: 100vh;
+        position: fixed;
+        margin: 0;
+        z-index: 10;
+        margin-top: -20vh;
+    }
+
+    #background-navbar {
+        width: 100vw;
+        height: 100vh;
+        background-color: #18181900;
+        transition: background-color 0.5s;
+        position: absolute;
+        margin: 0;
+    }
+
+    #background-navbar.open {
+        background-color: #18181949;
+    }
+
+    .navbar {
+        width: 35vw;
+        height: 90vh;
+        margin-top: 5vh;
+        transform: translateX(-100%);
+        transition: transform 0.5s ease;
+        background-color: #F61F1F;
+        border-radius: 20px;
+    }
+
+    #navbar.open {
+        transform: translateX(1vw);
+    }
+
+    .navbar-top {
+        width: 85%;
+        height: 10vh;
+        padding: 4vh 0 0 2vw ;
+    }
+
+    .hidenav {
+        background-color: #FFF9E7;
+        color: #181819;
+        width: fit-content;
+        width: 40px;
+        height: 40px;
+        border-radius: 100px;
+        border: none;
+        font-size: 20px;
+        float: left;
+    }
+
+    .res_soc {
+        float: right;
+        width: fit-content;
+    }
+
+    .navbar-corp {
+        width: 90%;
+        margin-left: 5%;
+        display: grid;
+        grid-template-columns: repeat(1);
+        grid-template-rows:8vh 8vh 8vh 8vh 8vh;
+    }
+
+    .navbar-bottom {
+        width: 100%;
+        height: 30vh;
+    }
+
+    h2 {
+        color: #FFF9E7; 
+        font-family: DxKord; 
+        font-size: 80px; 
+        letter-spacing: 3px; 
+        margin-top:100px;
+        margin-left: 20px;
+    }
+
+    .sect-1 {
+        display: grid;
+        height: 400px;
+        width: 100vw;
+        grid-template-columns: repeat(20,1fr);
+        grid-template-rows: 100px 100px 100px 100px;
+        margin-top: 20vh;
+    }
+
+    .nuage {
+        background-image: url("nuage.png");
+        background-repeat: no-repeat;
+        background-size: contain;
+    }
+
+    .sect-1-1 {
+        text-align: center;
+    }
+
+    .btn-1 {
+        padding: 15px 30px;
+        border-radius: 50px;
+        border:none;
+        color:#F61F1F;
+        background-color: #FFF9E7;
+        cursor: pointer;
+        box-shadow: 5px 7px #8a0e10;
+        font-family: DxKord;
+        font-size: 25px;
+        margin: auto;
+    }
+
+    .sect-2 {
+        width: 90%;
+        margin: auto;
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+        grid-gap: 50px;
+    }
+
+    .secteur2 {
+        margin-top: 0;
+        width: 100vw;
+        height:250vh;
+        margin-left: 0;
+        padding: 0;
+    }
+
+    .container-sect2 {
+        position: absolute;
+        background-color: #FFF9E7;
+        width: 100vw;
+        height:80vh;
+        margin-top:33vh;
+        left: 0;
+    }
+
+    .container2-sect2 {
+        position: absolute;
+        background-color: #FFF9E7;
+        width: 100vw;
+        height:120vh;
+        margin-top:113vh;
+        left: 0;
+    }
+
+    .container3-sect2 {
+        position: absolute;
+        background-color: #FFF9E7;
+        width: 100vw;
+        height:10vh;
+        margin-top:530vh;
+        left: 0;
+    }
+
+    .cards {
+        width: 100vw;
+        height:100vh;
+    }
+
+    .card {
+        color: #FFF9E7;
+        width: 20vw;
+        height: 42vh;
+        border: 0;
+        padding: 2vh 2vw;
+        border-radius: 20px;
+        font-family: DxKord;
+        font-size: 5vh;
+        box-shadow: 0 20px 4px  #18181949;
+        position: absolute;
+    }
+
+    #card-blue1 {
+        background-color: #A1C8FE;
+        z-index: 6;
+        top:25vh; 
+        left:10.5vw;
+    }
+
+    #card-blue2 {
+        background-color: #A1C8FE;
+        z-index: 6;
+        top:20vh; 
+        left:48vw;
+    }
+
+    #card-bordeau {
+        background-color: #B41012;
+        z-index: 7;
+        left:30vw;
+        top:10vh;
+    }
+
+    #card-red {
+        background-color: #F61F1F;
+        z-index: 9;
+        top:35vh; 
+        left:40vw;
+        
+    }
+
+    #card-black {
+        background-color: #181819;
+        z-index: 8;
+        top:45vh; 
+        left:20vw;
+    }
+
+    .secteur3 {
+        margin-top: 300vh;
+        width: 100vw;
+        height:100vh;
+        margin-left: 0;
+        padding: 0;
+    }
+
+    .secteur4 {
+        width: 100vw;
+        height:120vh;
+        margin-top: 30vh;
+        padding: 0;
+        position: absolute;
+        background-color: #181819;
+        z-index: 8;
+    }
+
+    .secteur5 {
+        width: 100vw;
+        height:100vh;
+        margin-top: -38vh;
+        padding: 0;
+        position: absolute;
+        background-color: #F61F1F;
+    }
+
+    .services {
+        width: 40vw;
+        display: grid;
+        grid-template-columns: 4;
+        grid-gap: 1vw;
+        margin-left: 5vw;
+        margin-top: 34vh;
+    }
+
+    .service {
+        text-decoration:underline;
+        color: rgb(251,251,251,0.5);
+        cursor: pointer;
+    }
+
+    .card-service {
+        width: 40vw;
+        border: solid 1px rgb(251,251,251,0.6);
+        padding: 2vw;
+        position: absolute;
+        top: 5vh;
+        right:5vw;
+        height: 80vh;
+        background-color: #181819;
+    }
+
+    .cardmethod {
+        width: 35vw;
+        height:18vh;
+        border:none;
+        border-radius: 20px;
+        margin-top: 0.5vh;
+        margin-left: 60vw;
+        display: flex; 
+        align-items: center;
+        position: absolute;
+    }
+
+    .secteur6 {
+        width: 100vw;
+        height:90vh;
+        margin-top: 365vh;
+        padding: 0;
+        position: absolute;
+        background-color: #FFF9E7;
+    }
+
+    .btn-2 {
+        width: 15vw;
+        padding: 15px 30px;
+        border-radius: 50px;
+        border:none;
+        color:#FFF9E7;
+        background-color: #F61F1F;
+        cursor: pointer;
+        box-shadow: 5px 7px #1F1F1F40;
+        font-family: DxKord;
+        font-size: 25px;
+        position: absolute;
+        top:70vh;
+        left:42.5vw;
+    }
+
+    .secteur7 {
+        width: 100vw;
+        height:150vh;
+        margin-top: 365vh;
+        padding: 0;
+        position: absolute;
+    }
+
+    .cardblog {
+        margin-top: 130vh;
+        width: 93vw;
+        margin-left: 2.5vw;
+        height: 45vh;
+        background-color: #FFF9E7;
+        border-radius: 15px;
+        padding: 2vh 1vw;
+    }
+
+    .cardblog-left {
+        width: 40%;
+        height: 100%;
+        float: left;
+    }
+
+    .cardblog-right {
+        width: 55%;
+        margin-left: 45%;
+    }
+
+    .btn-3 {
+        width: 17vw;
+        padding: 15px 30px;
+        border-radius: 50px;
+        border:none;
+        color:#F61F1F;
+        background-color: #FFF9E7;
+        cursor: pointer;
+        box-shadow: 5px 7px #1F1F1F40;
+        font-family: DxKord;
+        font-size: 25px;
+        margin: 10vh 0 0 41.5vw;
+    }
+
+    footer {
+        width: 100vw;
+        height:70vh;
+        margin-top: 600vh;
+        padding: 0;
+        position: absolute;
+        background-color: #181819;
+        overflow: hidden;
+    }
+
+</style>
 <body>
-    <header>
-        <div class="nav_bar">
-            <img src="./bonhomme.png" alt="" style="width:60px; position: fixed; top: 1px; margin-left: 10px;">
-            <p style="color:#F61F1F; width: 140px; margin-left:40px; cursor: pointer; font-family: DxKord; font-size: 25px; margin-top: 30px;">LE LABO</p>
-            <div class="liens">
-                <a href="" class="lien" style="grid-column: 1;">Vous êtes ?</a>
-                <a href="" class="lien" style="grid-column: 2;">Services</a>
-                <a href="" class="lien" style="grid-column: 3;">Réalisations</a>
-                <a href="" class="lien" style="grid-column: 4;">Ressources</a>
-                <a href="" class="lien" style="grid-column: 5;">Tarifs</a>
+
+    <div class="activ_nav">
+        <p style="padding-top: 1vh; margin: 0;">MENU</p>
+    </div>
+
+    <div class="navigation" id="navig">
+        <div id="background-navbar"></div>
+        <div class="navbar" id="navbar">
+            <div class="navbar-top">
+                <button class="hidenav">
+                    <svg style="width: 15px; height:15px; margin:auto;" viewBox="0 0 66 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <line x1="5.09446" y1="3.21359" x2="62.6608" y2="60.78" stroke="black" stroke-width="9.08943"/>
+                    <line x1="3.21414" y1="60.7803" x2="60.7805" y2="3.21389" stroke="black" stroke-width="9.08943"/>
+                    </svg>
+                </button>
+                <div class="res_soc">
+                    <svg style="width: 40px; margin-right:10px;" viewBox="0 0 119 119" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M59.2248 10.6741C75.0479 10.6741 76.9053 10.7446 83.1593 11.0268C88.943 11.2854 92.07 12.2493 94.1625 13.0722C96.9369 14.1538 98.9118 15.4234 100.981 17.4924C103.05 19.5613 104.343 21.5363 105.401 24.3106C106.2 26.4031 107.188 29.5301 107.446 35.3139C107.729 41.5679 107.799 43.4252 107.799 59.2483C107.799 75.0714 107.729 76.9287 107.446 83.1827C107.188 88.9665 106.224 92.0935 105.401 94.186C104.319 96.9603 103.05 98.9352 100.981 101.004C98.9118 103.073 96.9369 104.366 94.1625 105.424C92.07 106.224 88.943 107.211 83.1593 107.47C76.9053 107.752 75.0479 107.822 59.2248 107.822C43.4018 107.822 41.5444 107.752 35.2904 107.47C29.5066 107.211 26.3796 106.247 24.2871 105.424C21.5128 104.343 19.5378 103.073 17.4689 101.004C15.3999 98.9352 14.1067 96.9603 13.0487 94.186C12.2494 92.0935 11.2619 88.9665 11.0033 83.1827C10.7211 76.9287 10.6506 75.0714 10.6506 59.2483C10.6506 43.4252 10.7211 41.5679 11.0033 35.3139C11.2619 29.5301 12.2258 26.4031 13.0487 24.3106C14.1303 21.5363 15.3999 19.5613 17.4689 17.4924C19.5378 15.4234 21.5128 14.1302 24.2871 13.0722C26.3796 12.2729 29.5066 11.2854 35.2904 11.0268C41.5444 10.7211 43.4253 10.6741 59.2248 10.6741ZM59.2248 0C43.1431 0 41.1212 0.0705337 34.7966 0.352668C28.4956 0.634803 24.1931 1.64579 20.4313 3.10348C16.5284 4.6082 13.2368 6.65368 9.94526 9.94525C6.65368 13.2368 4.63171 16.5519 3.10348 20.4313C1.64579 24.1931 0.634804 28.4956 0.352669 34.8201C0.0705337 41.1211 0 43.1431 0 59.2248C0 75.3065 0.0705337 77.3284 0.352669 83.6529C0.634804 89.954 1.64579 94.2565 3.10348 98.0418C4.6082 101.945 6.65368 105.236 9.94526 108.528C13.2368 111.819 16.5519 113.841 20.4313 115.37C24.1931 116.827 28.4956 117.838 34.8202 118.12C41.1447 118.403 43.1431 118.473 59.2483 118.473C75.3535 118.473 77.352 118.403 83.6765 118.12C89.9775 117.838 94.2801 116.827 98.0654 115.37C101.968 113.865 105.26 111.819 108.551 108.528C111.843 105.236 113.865 101.921 115.393 98.0418C116.851 94.28 117.862 89.9775 118.144 83.6529C118.426 77.3284 118.497 75.33 118.497 59.2248C118.497 43.1196 118.426 41.1211 118.144 34.7966C117.862 28.4956 116.851 24.1931 115.393 20.4077C113.888 16.5049 111.843 13.2133 108.551 9.92174C105.26 6.63017 101.945 4.6082 98.0654 3.07997C94.3036 1.62227 90.001 0.611292 83.6765 0.329157C77.3285 0.0705337 75.3065 0 59.2248 0Z" fill="#FFF9E7"/>
+                    <path d="M59.2243 28.8247C42.4373 28.8247 28.8008 42.4377 28.8008 59.2483C28.8008 76.0588 42.4138 89.6718 59.2243 89.6718C76.0348 89.6718 89.6478 76.0588 89.6478 59.2483C89.6478 42.4377 76.0348 28.8247 59.2243 28.8247ZM59.2243 78.9742C48.3151 78.9742 39.4749 70.1339 39.4749 59.2247C39.4749 48.3155 48.3151 39.4753 59.2243 39.4753C70.1335 39.4753 78.9737 48.3155 78.9737 59.2247C78.9737 70.1339 70.1335 78.9742 59.2243 78.9742Z" fill="#FFF9E7"/>
+                    <path d="M90.8465 34.7026C94.7679 34.7026 97.9469 31.5236 97.9469 27.6022C97.9469 23.6807 94.7679 20.5018 90.8465 20.5018C86.925 20.5018 83.7461 23.6807 83.7461 27.6022C83.7461 31.5236 86.925 34.7026 90.8465 34.7026Z" fill="#FFF9E7"/>
+                    </svg>
+
+                    <svg style="width: 40px;" viewBox="0 0 110 110" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M101.566 0H8.09512C5.94816 0 3.88913 0.852877 2.37101 2.37101C0.852877 3.88913 0 5.94816 0 8.09512V101.566C0 103.713 0.852877 105.772 2.37101 107.29C3.88913 108.808 5.94816 109.661 8.09512 109.661H101.566C103.713 109.661 105.772 108.808 107.29 107.29C108.808 105.772 109.661 103.713 109.661 101.566V8.09512C109.661 5.94816 108.808 3.88913 107.29 2.37101C105.772 0.852877 103.713 0 101.566 0ZM32.6851 93.4175H16.1978V41.0467H32.6851V93.4175ZM24.43 33.7893C22.5598 33.7788 20.7347 33.2145 19.1849 32.1676C17.6351 31.1208 16.4301 29.6383 15.7221 27.9073C15.014 26.1763 14.8346 24.2743 15.2065 22.4415C15.5783 20.6086 16.4848 18.9269 17.8115 17.6087C19.1382 16.2905 20.8256 15.3949 22.6608 15.0348C24.4961 14.6747 26.3968 14.8663 28.1233 15.5855C29.8497 16.3047 31.3244 17.5191 32.3613 19.0756C33.3981 20.6321 33.9507 22.4608 33.9492 24.331C33.9669 25.5832 33.7322 26.826 33.2593 27.9855C32.7864 29.145 32.0849 30.1974 31.1966 31.0801C30.3083 31.9627 29.2514 32.6574 28.0889 33.1229C26.9263 33.5883 25.682 33.815 24.43 33.7893ZM93.4556 93.4632H76.976V64.8523C76.976 56.4145 73.3891 53.8101 68.759 53.8101C63.8699 53.8101 59.0723 57.4959 59.0723 65.0655V93.4632H42.585V41.0848H58.4402V48.3422H58.6534C60.245 45.1209 65.8195 39.615 74.3258 39.615C83.5251 39.615 93.4632 45.0753 93.4632 61.0675L93.4556 93.4632Z" fill="#FFF9E7"/>
+                    </svg>
+                </div>
             </div>
-            <button class="btn_nav">
-                ON EN DISCUTE ?
-            </button>
+            
+            <div class="navbar-corp">
+                <a href="" style="font-family: DxKord; text-decoration: none; color: #FFF9E7; font-size: 60px; letter-spacing: 2px; width: 100%;" >ACCUEIL</a>
+                <a href="" style="font-family: DxKord; text-decoration: none; color: #FFF9E7; font-size: 60px; letter-spacing: 2px; width: 100%;">À PROPOS</a>
+                <a href="" style="font-family: DxKord; text-decoration: none; color: #FFF9E7; font-size: 60px; letter-spacing: 2px; width: 100%;" >SERVICES</a>
+                <a href="" style="font-family: DxKord; text-decoration: none; color: #FFF9E7; font-size: 60px; letter-spacing: 2px; width: 100%;">NOTRE MÉTHODE</a>
+                <a href="" style="font-family: DxKord; text-decoration: none; color: #FFF9E7; font-size: 60px; letter-spacing: 2px; width: 100%;">CONTACT</a>
+            </div>
+
+            <div class="navbar-bottom">
+                <img src="./bonhomme1.png" alt="" style="width: 7vw; margin-top: 10vh; margin-left: 15vw;">
+                <p style="font-family: DxKord; color: #FFF9E7; font-size: 55px; letter-spacing: 1px; width: 100%; text-align: center; margin: 0; margin-top: 0.5vh;">
+                    LE LABO
+                </p>
+            </div>
+        
         </div>
-    </header>
+    </div>
+
     <section>
         <div class="sect-1">
-            <div class="nuage nuage1" style="grid-column: 1/3; grid-row: 4;"></div>
+            <div class="nuage nuage1" style="grid-column: 1/3; grid-row: 4; transform: rotateY(180deg);"></div>
             <div class="nuage nuage2" style="grid-column: 3/5; grid-row: 2;"></div>
             <div style="grid-column: 6/16; grid-row: 1/5; color: #FFF9E7; font-family: DxKord; text-align: center;">
                 <p style="font-size: 120px; letter-spacing: 3px; margin:0">LE</p>
@@ -36,7 +457,7 @@
         </div>
         <div class="sect-1-1">
             <p style=" color: #FFF9E7; font-family: DxKord; text-align: center; font-size: 60px; letter-spacing: 1px; margin-top:75px;">ON FAIT DES SITES ET D'AUTRES TRUCS...</p>
-            <img src="./bonhomme1.png" alt="" style="width:230px; position: absolute; right:20px; top:620px; margin-left: 10px;">
+            <img src="./bonhomme1.png" alt="" style="width:200px; position: absolute; right:20px; top:620px; margin-left: 10px;">
             <button class="btn-1">ON EN DISCUTE ?</button>
         </div>
     </section>
@@ -67,7 +488,7 @@
 
         <div class="container-sect2">
             <p style="position:absolute; z-index:6; font-family: DxKord; font-size: 20px; margin-top:5vh; width: fit-content; right:0; color:#F61F1F; margin-right: 5vw;">
-                A PROPOS...
+                À PROPOS...
             </p>
             <p data-splitting class="test-reveal" style="position:absolute; z-index:6; font-family: DxKord; font-size: 110px; letter-spacing: 3px; margin-top:10vh; width: 80vw; margin-left: 10vw; color:#F61F1F;">
                 LE LABO EST UNE AGENCE CRÉATIVE QUI METS L'ACCENT SUR LA PERFORMANCE
@@ -260,7 +681,7 @@
         </div>
     </section>
 
-    <svg style="width:100vw; margin-left:-1vw; margin-top:450vh;" viewBox="0 0 2042 781" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <svg style="width:100vw; margin-top:450vh;" viewBox="0 0 2042 781" fill="none" xmlns="http://www.w3.org/2000/svg">
         <g filter="url(#filter0_d_53_1113)">
         <path d="M488 98.7668L550.632 185.704C647.278 319.855 858.516 263.265 875.156 98.7668L968 1H609.374L488 98.7668Z" fill="#181818"/>
         <path d="M1148 106.368C1185.94 300.717 1454.67 324.003 1525.48 139.076L1538 106.368V0H1148V106.368Z" fill="#181818"/>
@@ -383,350 +804,3 @@
     <script src="./script.js"></script>
 </body>
 </html>
-<style>
-    @font-face {
-        font-family: DxKord;
-        src: url(./FREE/DxKord-InktrapUltraExpanded.otf);
-    }
-
-    @font-face {
-        font-family: DxKordExp;
-        src: url(./FREE/DxKord-InktrapExpanded.otf);
-    }
-
-    body {
-        background-color: #F61F1F;
-        font-family: Arial, Helvetica, sans-serif;
-        overflow-x : hidden;
-    }
-
-    h2 {
-        color: #FFF9E7; 
-        font-family: DxKord; 
-        font-size: 80px; 
-        letter-spacing: 3px; 
-        margin-top:100px;
-        margin-left: 20px;
-    }
-
-    header {
-        margin-top: 70px;
-    }
-
-    .nav_bar {
-        display: flex;
-        align-items: center;
-        background-color: #FFF9E7;
-        border-radius: 100px;
-        height: 60px;
-        width:60%;
-        position: fixed;
-        left:20%;
-        top:60px;
-        margin: auto;
-        border: solid 2px black;
-    }
-
-    .liens {
-        margin: auto;
-        width: 50%;
-        display: grid;
-        grid-template-columns: 5;
-        grid-gap: 10px;
-    }
-
-    .lien {
-        text-decoration: none;
-        color:#F61F1F;
-        cursor: pointer;
-    }
-
-    .btn_nav {
-        padding: 10px 20px;
-        border-radius: 50px;
-        border: solid 2px #F61F1F;
-        color:#F61F1F;
-        background-color: #FFF9E7;
-        margin-right: 15px;
-        cursor: pointer;
-        box-shadow: 5px 5px rgb(196, 195, 195);
-    }
-
-    .sect-1 {
-        display: grid;
-        height: 400px;
-        width: 100vw;
-        grid-template-columns: repeat(20,1fr);
-        grid-template-rows: 100px 100px 100px 100px;
-        margin-top: 25vh;
-    }
-
-    .nuage {
-        background-image: url("nuage.png");
-        background-repeat: no-repeat;
-        background-size: contain;
-    }
-
-    .sect-1-1 {
-        text-align: center;
-    }
-
-    .btn-1 {
-        padding: 15px 30px;
-        border-radius: 50px;
-        border:none;
-        color:#F61F1F;
-        background-color: #FFF9E7;
-        cursor: pointer;
-        box-shadow: 5px 7px #8a0e10;
-        font-family: DxKord;
-        font-size: 25px;
-        margin: auto;
-    }
-
-    .sect-2 {
-        width: 90%;
-        margin: auto;
-        display: grid;
-        grid-template-columns: repeat(3,1fr);
-        grid-gap: 50px;
-    }
-
-    .secteur2 {
-        margin-top: 0;
-        width: 100vw;
-        height:250vh;
-        margin-left: 0;
-        padding: 0;
-    }
-
-    .container-sect2 {
-        position: absolute;
-        background-color: #FFF9E7;
-        width: 100vw;
-        height:80vh;
-        margin-top:33vh;
-        left: 0;
-    }
-
-    .container2-sect2 {
-        position: absolute;
-        background-color: #FFF9E7;
-        width: 100vw;
-        height:120vh;
-        margin-top:113vh;
-        left: 0;
-    }
-
-    .container3-sect2 {
-        position: absolute;
-        background-color: #FFF9E7;
-        width: 100vw;
-        height:10vh;
-        margin-top:530vh;
-        left: 0;
-    }
-
-    .cards {
-        width: 100vw;
-        height:100vh;
-    }
-
-    .card {
-        color: #FFF9E7;
-        width: 20vw;
-        height: 42vh;
-        border: 0;
-        padding: 2vh 2vw;
-        border-radius: 20px;
-        font-family: DxKord;
-        font-size: 5vh;
-        box-shadow: 0 20px 4px  #18181949;
-        position: absolute;
-    }
-
-    #card-blue1 {
-        background-color: #A1C8FE;
-        z-index: 6;
-        top:25vh; 
-        left:10.5vw;
-    }
-
-    #card-blue2 {
-        background-color: #A1C8FE;
-        z-index: 6;
-        top:20vh; 
-        left:48vw;
-    }
-
-    #card-bordeau {
-        background-color: #B41012;
-        z-index: 7;
-        left:30vw;
-        top:10vh;
-    }
-
-    #card-red {
-        background-color: #F61F1F;
-        z-index: 9;
-        top:35vh; 
-        left:40vw;
-        
-    }
-
-    #card-black {
-        background-color: #181819;
-        z-index: 8;
-        top:45vh; 
-        left:20vw;
-    }
-
-    .secteur3 {
-        margin-top: 300vh;
-        width: 100vw;
-        height:100vh;
-        margin-left: 0;
-        padding: 0;
-    }
-
-    .secteur4 {
-        width: 100vw;
-        height:120vh;
-        margin-left: -1vw;
-        margin-top: 30vh;
-        padding: 0;
-        position: absolute;
-        background-color: #181819;
-        z-index: 8;
-    }
-
-    .secteur5 {
-        width: 100vw;
-        height:100vh;
-        margin-left: -1vw;
-        margin-top: -38vh;
-        padding: 0;
-        position: absolute;
-        background-color: #F61F1F;
-    }
-
-    .services {
-        width: 40vw;
-        display: grid;
-        grid-template-columns: 4;
-        grid-gap: 1vw;
-        margin-left: 5vw;
-        margin-top: 34vh;
-    }
-
-    .service {
-        text-decoration:underline;
-        color: rgb(251,251,251,0.5);
-        cursor: pointer;
-    }
-
-    .card-service {
-        width: 40vw;
-        border: solid 1px rgb(251,251,251,0.6);
-        padding: 2vw;
-        position: absolute;
-        top: 5vh;
-        right:5vw;
-        height: 80vh;
-        background-color: #181819;
-    }
-
-    .cardmethod {
-        width: 35vw;
-        height:18vh;
-        border:none;
-        border-radius: 20px;
-        margin-top: 0.5vh;
-        margin-left: 60vw;
-        display: flex; 
-        align-items: center;
-        position: absolute;
-    }
-
-    .secteur6 {
-        width: 100vw;
-        height:90vh;
-        margin-left: -1vw;
-        margin-top: 365vh;
-        padding: 0;
-        position: absolute;
-        background-color: #FFF9E7;
-    }
-
-    .btn-2 {
-        width: 15vw;
-        padding: 15px 30px;
-        border-radius: 50px;
-        border:none;
-        color:#FFF9E7;
-        background-color: #F61F1F;
-        cursor: pointer;
-        box-shadow: 5px 7px #1F1F1F40;
-        font-family: DxKord;
-        font-size: 25px;
-        position: absolute;
-        top:70vh;
-        left:42.5vw;
-    }
-
-    .secteur7 {
-        width: 100vw;
-        height:150vh;
-        margin-left: -1vw;
-        margin-top: 365vh;
-        padding: 0;
-        position: absolute;
-    }
-
-    .cardblog {
-        margin-top: 130vh;
-        width: 93vw;
-        margin-left: 2.5vw;
-        height: 45vh;
-        background-color: #FFF9E7;
-        border-radius: 15px;
-        padding: 2vh 1vw;
-    }
-
-    .cardblog-left {
-        width: 40%;
-        height: 100%;
-        float: left;
-    }
-
-    .cardblog-right {
-        width: 55%;
-        margin-left: 45%;
-    }
-
-    .btn-3 {
-        width: 17vw;
-        padding: 15px 30px;
-        border-radius: 50px;
-        border:none;
-        color:#F61F1F;
-        background-color: #FFF9E7;
-        cursor: pointer;
-        box-shadow: 5px 7px #1F1F1F40;
-        font-family: DxKord;
-        font-size: 25px;
-        margin: 10vh 0 0 41.5vw;
-    }
-
-    footer {
-        width: 100vw;
-        height:70vh;
-        margin-left: -1vw;
-        margin-top: 600vh;
-        padding: 0;
-        position: absolute;
-        background-color: #181819;
-        overflow: hidden;
-    }
-
-</style>
