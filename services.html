@@ -31,9 +31,8 @@
     footer {
         width: 100vw;
         height:70vh;
-        margin-top: 600vh;
         padding: 0;
-        position: absolute;
+        position: relative;
         background-color: #181819;
         overflow: hidden;
     }
@@ -57,11 +56,15 @@
         cursor: pointer;
     }
 
-    .navigation {
+    #navigation {
         width: 100vw;
         height: 100vh;
         position: fixed;
         margin: 0;
+        z-index: -1;
+    }
+
+    #navigation.open {
         z-index: 10;
     }
 
@@ -220,13 +223,156 @@
         font-size: 6.5vw;
     }
 
+    .question {
+        width: 100vw;
+        height: 17vh;
+        border-top: solid 0.25vh #FFF9E7;
+        overflow: hidden;
+        transition: height 0.5s ease;
+    }
+
+    #question1.repopen, #question2.repopen, #question3.repopen, #question4.repopen, #question5.repopen {
+        height: 40vh;
+    }
+
+    .headquestion {
+        width: 100vw;
+        height: 17vh;
+    }
+
+    h3 {
+        width: 75vw;
+        height: 10vh;
+        padding: 2vh 7vw 2vh 3vw;
+        font-family: DxKord;
+        font-size: 2vw;
+        color: #FFF9E7;
+        font-weight: 100;
+        float: left;
+        margin: 3vh 0 2vh 0;
+    }
+
+    .btnfaq {
+        width: 3vw;
+        height: 3vw;
+        border:none;
+        border-radius: 10vw;
+        float: right;
+        margin-right:5vw;
+        margin-top: 7vh;
+        transform: rotate(-90deg);
+        transition: transform 0.5s ease;
+    }
+
+    #openrep1.open, #openrep2.open, #openrep3.open, #openrep4.open, #openrep5.open {
+        transform: rotate(0deg);
+    }
+
+    .reponse {
+        width: 100vw;
+        height: 30vh;
+    }
+
+    .txtrep {
+        width: 75vw;
+        height: 15vh;
+        font-family: DxKordExp;
+        font-size: 1.5vw;
+        color: #FFF9E7;
+        font-weight: 50;
+        letter-spacing: 0.05vw;
+        padding-left: 3vw;
+        line-height: 3.5vh;
+        margin: 0;
+    }
+
+    .etiquette2 {
+        padding: 1vh 0.5vw 0 0.5vw; 
+        border: none; 
+        border-radius: 0.20vw;
+        font-family: DxKord; 
+        letter-spacing: 0.05vw;
+        font-size: 1.8vw; 
+        background-color: #FFF9E7; 
+        text-align: center; 
+        width: fit-content; 
+        color: #F61F1F;
+        float: right;
+        margin-right:2vw;
+        margin-top: 0;
+    }
+
+    .contact {
+        background-color: #FFF9E7;
+        width: 100vw;
+        height: 80vh;
+        position: relative;
+    }
+
+    .etiquette3 {
+        padding: 1.5vh 0.5vw 0.5vh 0.5vw; 
+        border: none; 
+        border-radius: 0.5vw;
+        font-family: DxKord; 
+        letter-spacing: 0.05vw;
+        font-size: 1.8vw; 
+        background-color: #F61F1F; 
+        text-align: center; 
+        width: fit-content; 
+        color: #FFF9E7;
+        float: left;
+        margin-left:6.5vw;
+        margin-top: 16.5vh;
+        rotate: calc(-20deg);
+        z-index: 2;
+        position: absolute;
+    }
+
+    .titre_contact {
+        width: 50vw;
+        height: 25vh;
+        padding: 25vh 0 0 10vw;
+        font-family: DxKord; 
+        letter-spacing: 0.15vw;
+        font-size: 4.5vw; 
+        color: #F61F1F;
+        text-align: left;
+        float: left;
+    }
+
+    .txtcontact {
+        width: 20vw;
+        height: 14vh;
+        padding: 31vh 0 5vh 5vw;
+        margin-left: 65vw;
+        font-family: DxKord; 
+        font-size: 1.2vw; 
+        color: #F61F1F;
+        margin-bottom: 0;
+    }
+
+    .btn-3 {
+        width: 14vw;
+        padding: 1vh 1vw 0.5vh 1vw;
+        border-radius: 50px;
+        border:none;
+        color:#FFF9E7;
+        background-color: #F61F1F;
+        cursor: pointer;
+        box-shadow: 5px 7px #1F1F1F40;
+        font-family: DxKordExp;
+        font-size: 1.8vw;
+        margin-left: 43vw;
+        letter-spacing: 0.05vw;
+    }
+
 </style>
 <body>
     <div class="activ_nav">
         <p style="padding-top: 1vh; margin: 0;">MENU</p>
     </div>
 
-    <div class="navigation" id="navig">
+    <div id="navigation">
         <div id="background-navbar"></div>
         <div class="navbar" id="navbar">
             <div class="navbar-top">
@@ -355,20 +501,127 @@
             </h2>
         </div>
         <div class="listeq">
-            <div class="question">
+            <div class="question" id="question1">
                 <div class="headquestion">
+                    <h3>
+                        Je passe trop de temps sur des tâches qui ne créent pas de valeur pour mon entreprise.
+                    </h3>
 
+                    <button class="btnfaq" id="openrep1">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640"><!--!Font Awesome Free v7.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2026 Fonticons, Inc.--><path fill="#F61F1F" d="M297.4 438.6C309.9 451.1 330.2 451.1 342.7 438.6L502.7 278.6C515.2 266.1 515.2 245.8 502.7 233.3C490.2 220.8 469.9 220.8 457.4 233.3L320 370.7L182.6 233.4C170.1 220.9 149.8 220.9 137.3 233.4C124.8 245.9 124.8 266.2 137.3 278.7L297.3 438.7z"/></svg>
+                    </button>
                 </div>
                 <div class="reponse">
+                    <p class="txtrep">
+                        Notre objectif est simple : identifier les tâches qui vous font perdre du temps et les transformer en processus automatisés. Vous gagnez en efficacité, améliorez vos performances et pouvez vous concentrer sur les actions qui génèrent réellement de la valeur pour votre entreprise.
+                    </p>
+                    <p class="etiquette2">
+                        AUTOMATISATION
+                    </p>
+                </div>
+            </div>
+            <div class="question" id="question2">
+                <div class="headquestion">
+                    <h3>
+                        Je passe trop de temps sur des tâches qui ne créent pas de valeur pour mon entreprise.
+                    </h3>
 
+                    <button class="btnfaq" id="openrep2">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640"><!--!Font Awesome Free v7.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2026 Fonticons, Inc.--><path fill="#F61F1F" d="M297.4 438.6C309.9 451.1 330.2 451.1 342.7 438.6L502.7 278.6C515.2 266.1 515.2 245.8 502.7 233.3C490.2 220.8 469.9 220.8 457.4 233.3L320 370.7L182.6 233.4C170.1 220.9 149.8 220.9 137.3 233.4C124.8 245.9 124.8 266.2 137.3 278.7L297.3 438.7z"/></svg>
+                    </button>
+                </div>
+                <div class="reponse">
+                    <p class="txtrep">
+                        Notre objectif est simple : identifier les tâches qui vous font perdre du temps et les transformer en processus automatisés. Vous gagnez en efficacité, améliorez vos performances et pouvez vous concentrer sur les actions qui génèrent réellement de la valeur pour votre entreprise.
+                    </p>
+                    <p class="etiquette2">
+                        AUTOMATISATION
+                    </p>
+                </div>
+            </div>
+            <div class="question" id="question3">
+                <div class="headquestion">
+                    <h3>
+                        Je passe trop de temps sur des tâches qui ne créent pas de valeur pour mon entreprise.
+                    </h3>
+
+                    <button class="btnfaq" id="openrep3">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640"><!--!Font Awesome Free v7.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2026 Fonticons, Inc.--><path fill="#F61F1F" d="M297.4 438.6C309.9 451.1 330.2 451.1 342.7 438.6L502.7 278.6C515.2 266.1 515.2 245.8 502.7 233.3C490.2 220.8 469.9 220.8 457.4 233.3L320 370.7L182.6 233.4C170.1 220.9 149.8 220.9 137.3 233.4C124.8 245.9 124.8 266.2 137.3 278.7L297.3 438.7z"/></svg>
+                    </button>
+                </div>
+                <div class="reponse">
+                    <p class="txtrep">
+                        Notre objectif est simple : identifier les tâches qui vous font perdre du temps et les transformer en processus automatisés. Vous gagnez en efficacité, améliorez vos performances et pouvez vous concentrer sur les actions qui génèrent réellement de la valeur pour votre entreprise.
+                    </p>
+                    <p class="etiquette2">
+                        AUTOMATISATION
+                    </p>
+                </div>
+            </div>
+            <div class="question" id="question4">
+                <div class="headquestion">
+                    <h3>
+                        Je passe trop de temps sur des tâches qui ne créent pas de valeur pour mon entreprise.
+                    </h3>
+
+                    <button class="btnfaq" id="openrep4">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640"><!--!Font Awesome Free v7.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2026 Fonticons, Inc.--><path fill="#F61F1F" d="M297.4 438.6C309.9 451.1 330.2 451.1 342.7 438.6L502.7 278.6C515.2 266.1 515.2 245.8 502.7 233.3C490.2 220.8 469.9 220.8 457.4 233.3L320 370.7L182.6 233.4C170.1 220.9 149.8 220.9 137.3 233.4C124.8 245.9 124.8 266.2 137.3 278.7L297.3 438.7z"/></svg>
+                    </button>
+                </div>
+                <div class="reponse">
+                    <p class="txtrep">
+                        Notre objectif est simple : identifier les tâches qui vous font perdre du temps et les transformer en processus automatisés. Vous gagnez en efficacité, améliorez vos performances et pouvez vous concentrer sur les actions qui génèrent réellement de la valeur pour votre entreprise.
+                    </p>
+                    <p class="etiquette2">
+                        AUTOMATISATION
+                    </p>
+                </div>
+            </div>
+            <div class="question" id="question5">
+                <div class="headquestion">
+                    <h3>
+                        Je passe trop de temps sur des tâches qui ne créent pas de valeur pour mon entreprise.
+                    </h3>
+
+                    <button class="btnfaq" id="openrep5">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640"><!--!Font Awesome Free v7.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2026 Fonticons, Inc.--><path fill="#F61F1F" d="M297.4 438.6C309.9 451.1 330.2 451.1 342.7 438.6L502.7 278.6C515.2 266.1 515.2 245.8 502.7 233.3C490.2 220.8 469.9 220.8 457.4 233.3L320 370.7L182.6 233.4C170.1 220.9 149.8 220.9 137.3 233.4C124.8 245.9 124.8 266.2 137.3 278.7L297.3 438.7z"/></svg>
+                    </button>
+                </div>
+                <div class="reponse">
+                    <p class="txtrep">
+                        Notre objectif est simple : identifier les tâches qui vous font perdre du temps et les transformer en processus automatisés. Vous gagnez en efficacité, améliorez vos performances et pouvez vous concentrer sur les actions qui génèrent réellement de la valeur pour votre entreprise.
+                    </p>
+                    <p class="etiquette2">
+                        AUTOMATISATION
+                    </p>
                 </div>
             </div>
         </div>
     </section>
 
+    <section class="contact">
+        <p class="etiquette3">
+            LES GOATS
+        </p>
+        <h2 class="titre_contact">
+            ENVIE D'AVANCER 
+            CONTACTEZ NOUS
+        </h2>
+        <p class="txtcontact">
+            PARLONS PROJETS AUTOUR D'UN BON CAFÉ
+        </p>
+        <div style="width: 100vw; height: 10vh; margin-top: 5vh;">
+            <button class="btn-3" >ON EN DISCUTE ?</button>
+            <img src="./haveabreak.png" alt="" style="width: 18vw; position: absolute; bottom: 0; right: 2vw;">
 
+        </div>
+    </section>
 
-
+    <footer>
+        <p style="position:absolute; bottom: 0; font-family: DxKord; font-size:23vw; letter-spacing: 3px; color:#FFF9E7; width: 110vw; margin: 15vh 0 -13vh 0;">
+            LE LABO
+        </p>
+    </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.1/dist/gsap.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.1/dist/ScrollTrigger.min.js"></script>
