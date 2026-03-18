@@ -53,57 +53,6 @@ btn_nav_activ.addEventListener("click", () => {
     setTimeout(() => {
         navbar.classList.add("open")
     }, 300);
- 
-})
-
-div_quest1.addEventListener("click", () => {
-    if(div_quest1.classList.contains("repopen")){
-        div_quest1.classList.remove("repopen")
-        btn_q1.classList.remove("open")
-    }else{
-        div_quest1.classList.add("repopen")
-        btn_q1.classList.add("open")
-    }
-})
-
-div_quest2.addEventListener("click", () => {
-    if(div_quest2.classList.contains("repopen")){
-        div_quest2.classList.remove("repopen")
-        btn_q2.classList.remove("open")
-    }else{
-        div_quest2.classList.add("repopen")
-        btn_q2.classList.add("open")
-    }
-})
-
-div_quest3.addEventListener("click", () => {
-    if(div_quest3.classList.contains("repopen")){
-        div_quest3.classList.remove("repopen")
-        btn_q3.classList.remove("open")
-    }else{
-        div_quest3.classList.add("repopen")
-        btn_q3.classList.add("open")
-    }
-})
-
-div_quest4.addEventListener("click", () => {
-    if(div_quest4.classList.contains("repopen")){
-        div_quest4.classList.remove("repopen")
-        btn_q4.classList.remove("open")
-    }else{
-        div_quest4.classList.add("repopen")
-        btn_q4.classList.add("open")
-    }
-})
-
-div_quest5.addEventListener("click", () => {
-    if(div_quest5.classList.contains("repopen")){
-        div_quest5.classList.remove("repopen")
-        btn_q5.classList.remove("open")
-    }else{
-        div_quest5.classList.add("repopen")
-        btn_q5.classList.add("open")
-    }
 })
 
 gsap.to(nuage1, {
