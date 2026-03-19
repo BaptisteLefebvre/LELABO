@@ -97,7 +97,6 @@ gsap.from(services, {
         start: "top top",
         end: "+=1500",
         scrub : true,
-        pin: true,
-        markers:true
+        pin: true
     }
 })
