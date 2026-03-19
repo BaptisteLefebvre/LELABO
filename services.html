@@ -150,9 +150,10 @@
 
     .sections {
         width: 100vw;
-        height: 90vh;
+        height: 100vh;
         background-color: #FFF9E7;
         color: #F61F1F;
+        position: absolute;
     }
 
     .btn-2 {
@@ -207,6 +208,7 @@
         height: 20vh;
         padding: 25vh 30vw 25vh 30vw;
         border:none;
+        position: relative;
     }
 
     .h2faq {
@@ -422,207 +424,208 @@
         </div>
     </section>
 
-    <section class="sections">
-        <div style="width: 66vw; float: left; margin-top: 0; overflow:none; height: 90vh;">
-            <img src="./img_service_1.png" alt="" style="height: 90vh; width: 100%; object-fit:cover;">
-            <p class="etiquettes" style="top:105vh; left:2vw; ">SEO</p>
-            <p class="etiquettes" style="top:105vh; left:8.5vw; ">SEA</p>
-            <p class="etiquettes" style="top:105vh; left:15vw; ">ADS</p>
-        </div>
-        <div style="width: 33vw; margin-left: 66vw; margin-top: 0; height: 90vh;">
-            <h2 style="height: 25vh; margin: 0;">
-                VISIBILITÉ
+    <div class="sects" style="position: relative;">
+        <section class="sections">
+            <div style="width: 66vw; float: left; margin-top: 0; overflow:none; height: 100vh; position: relative;">
+                <img src="./img_service_1.png" alt="" style="height: 100vh; width: 100%; object-fit:cover;">
+                <p class="etiquettes" style="bottom:2vh; left:2vw; ">SEO</p>
+                <p class="etiquettes" style="bottom:2vh; left:8.5vw; ">SEA</p>
+                <p class="etiquettes" style="bottom:2vh; left:15vw; ">ADS</p>
+            </div>
+            <div style="width: 33vw; margin-left: 66vw; margin-top: 10vh; height: 90vh;">
+                <h2 style="height: 25vh; margin: 0;">
+                    VISIBILITÉ
+                </h2>
+                <div style="height: 30vh; margin: 0;">
+                    <p style="margin: 0 2vw 3vh 2vw; font-family: DxKordExp; font-size: 2vw; color: #F61F1F; text-align: center;">
+                        IMAGINEZ LA TÊTE DE VOS CONCURRENTS QUAND VOUS AUREZ FAIS APPEL À NOS SERVICES...
+                    </p>
+
+                    <button class="btn-2">ON EN DISCUTE ?</button>
+                </div>
+            
+
+                <img src="./bonhomme1.png" alt="" style="height:30vh; float: right;">
+            </div>
+        </section>
+
+        <section class="sections sections2">
+            <div style="width: 66vw; float: right; margin-top: 0; overflow:none; height: 100vh; position: relative;">
+                <img src="./img_service_1.png" alt="" style="height: 100vh; width: 100%; object-fit:cover;">
+                <p class="etiquettes" style="bottom:2vh; right:18.5vw; ">CONSULTING</p>
+                <p class="etiquettes" style="bottom:2vh; right:2vw; ">GROWTHACKING</p>
+            </div>
+            <div style="width: 34vw; margin-right: 66vw; margin-top: 10vh; height: 90vh;">
+                <h2 style="height: 25vh; margin: 0; font-size: 12vw;">
+                    CONSULTING
+                </h2>
+                <div style="height: 30vh; margin: 0;">
+                    <p style="margin: 0 2vw 3vh 2vw; font-family: DxKordExp; font-size: 2vw; color: #F61F1F; text-align: center;">
+                        IMAGINEZ LA TÊTE DE VOS CONCURRENTS QUAND VOUS AUREZ FAIS APPEL À NOS SERVICES...
+                    </p>
+
+                    <button class="btn-2">ON EN DISCUTE ?</button>
+                </div>
+            
+
+                <img src="./bonhomme1.png" alt="" style="height:30vh; float: left; transform: rotateY(180deg);">
+            </div>
+        </section>
+
+        <section class="sections sections2">
+            <div style="width: 66vw; float: left; margin-top: 0; overflow:none; height: 100vh; position: relative;">
+                <img src="./img_service_1.png" alt="" style="height: 100vh; width: 100%; object-fit:cover;">
+                <p class="etiquettes" style="bottom:2vh; left:2vw; ">SEO</p>
+                <p class="etiquettes" style="bottom:2vh; left:8.5vw; ">SEA</p>
+                <p class="etiquettes" style="bottom:2vh; left:15vw; ">ADS</p>
+            </div>
+            <div style="width: 34vw; margin-left: 66vw; margin-top: 10vh; height: 90vh;">
+                <h2 style="height: 25vh; margin: 0;">
+                    SITE WEB
+                </h2>
+                <div style="height: 30vh; margin: 0;">
+                    <p style="margin: 0 2vw 3vh 2vw; font-family: DxKordExp; font-size: 2vw; color: #F61F1F; text-align: center;">
+                        IMAGINEZ LA TÊTE DE VOS CONCURRENTS QUAND VOUS AUREZ FAIS APPEL À NOS SERVICES...
+                    </p>
+
+                    <button class="btn-2">ON EN DISCUTE ?</button>
+                </div>
+            
+
+                <img src="./bonhomme1.png" alt="" style="height:30vh; float: right;">
+            </div>
+        </section>
+        <section class="faq sections2">
+            <div class="headfaq">
+                <img src="./bonhomme-help.png" alt="" style="position: absolute; width: 8vw; top:12vh; right: 24vw; rotate: calc(25deg); z-index: 2; width: 7vw;">
+                <h2 class="h2faq">
+                    <span style="font-size: 3vw;">ON</span><span style="font-size: 5vw; margin-left: 0.5vw;">PEUT</span> T'AIDER ?!
+                </h2>
+            </div>
+            <div class="listeq">
+                <div class="question" id="question1">
+                    <div class="headquestion">
+                        <h3>
+                            Je passe trop de temps sur des tâches qui ne créent pas de valeur pour mon entreprise.
+                        </h3>
+
+                        <button class="btnfaq" id="openrep1">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640"><!--!Font Awesome Free v7.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2026 Fonticons, Inc.--><path fill="#F61F1F" d="M297.4 438.6C309.9 451.1 330.2 451.1 342.7 438.6L502.7 278.6C515.2 266.1 515.2 245.8 502.7 233.3C490.2 220.8 469.9 220.8 457.4 233.3L320 370.7L182.6 233.4C170.1 220.9 149.8 220.9 137.3 233.4C124.8 245.9 124.8 266.2 137.3 278.7L297.3 438.7z"/></svg>
+                        </button>
+                    </div>
+                    <div class="reponse">
+                        <p class="txtrep">
+                            Notre objectif est simple : identifier les tâches qui vous font perdre du temps et les transformer en processus automatisés. Vous gagnez en efficacité, améliorez vos performances et pouvez vous concentrer sur les actions qui génèrent réellement de la valeur pour votre entreprise.
+                        </p>
+                        <p class="etiquette2">
+                            AUTOMATISATION
+                        </p>
+                    </div>
+                </div>
+                <div class="question" id="question2">
+                    <div class="headquestion">
+                        <h3>
+                            Je lance des campagnes, mais je ne sais pas mesurer clairement leur rentabilité.
+                        </h3>
+
+                        <button class="btnfaq" id="openrep2">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640"><!--!Font Awesome Free v7.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2026 Fonticons, Inc.--><path fill="#F61F1F" d="M297.4 438.6C309.9 451.1 330.2 451.1 342.7 438.6L502.7 278.6C515.2 266.1 515.2 245.8 502.7 233.3C490.2 220.8 469.9 220.8 457.4 233.3L320 370.7L182.6 233.4C170.1 220.9 149.8 220.9 137.3 233.4C124.8 245.9 124.8 266.2 137.3 278.7L297.3 438.7z"/></svg>
+                        </button>
+                    </div>
+                    <div class="reponse">
+                        <p class="txtrep">
+                            Notre objectif est simple : identifier les tâches qui vous font perdre du temps et les transformer en processus automatisés. Vous gagnez en efficacité, améliorez vos performances et pouvez vous concentrer sur les actions qui génèrent réellement de la valeur pour votre entreprise.
+                        </p>
+                        <p class="etiquette2">
+                            AUTOMATISATION
+                        </p>
+                    </div>
+                </div>
+                <div class="question" id="question3">
+                    <div class="headquestion">
+                        <h3>
+                            Je sais que mon trafic pourrait convertir davantage, mais je ne sais pas quoi optimiser.
+                        </h3>
+
+                        <button class="btnfaq" id="openrep3">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640"><!--!Font Awesome Free v7.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2026 Fonticons, Inc.--><path fill="#F61F1F" d="M297.4 438.6C309.9 451.1 330.2 451.1 342.7 438.6L502.7 278.6C515.2 266.1 515.2 245.8 502.7 233.3C490.2 220.8 469.9 220.8 457.4 233.3L320 370.7L182.6 233.4C170.1 220.9 149.8 220.9 137.3 233.4C124.8 245.9 124.8 266.2 137.3 278.7L297.3 438.7z"/></svg>
+                        </button>
+                    </div>
+                    <div class="reponse">
+                        <p class="txtrep">
+                            Notre objectif est simple : identifier les tâches qui vous font perdre du temps et les transformer en processus automatisés. Vous gagnez en efficacité, améliorez vos performances et pouvez vous concentrer sur les actions qui génèrent réellement de la valeur pour votre entreprise.
+                        </p>
+                        <p class="etiquette2">
+                            AUTOMATISATION
+                        </p>
+                    </div>
+                </div>
+                <div class="question" id="question4">
+                    <div class="headquestion">
+                        <h3>
+                            Je sens que mon potentiel de croissance est là, mais je n’arrive pas à l’exploiter.
+                        </h3>
+
+                        <button class="btnfaq" id="openrep4">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640"><!--!Font Awesome Free v7.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2026 Fonticons, Inc.--><path fill="#F61F1F" d="M297.4 438.6C309.9 451.1 330.2 451.1 342.7 438.6L502.7 278.6C515.2 266.1 515.2 245.8 502.7 233.3C490.2 220.8 469.9 220.8 457.4 233.3L320 370.7L182.6 233.4C170.1 220.9 149.8 220.9 137.3 233.4C124.8 245.9 124.8 266.2 137.3 278.7L297.3 438.7z"/></svg>
+                        </button>
+                    </div>
+                    <div class="reponse">
+                        <p class="txtrep">
+                            Notre objectif est simple : identifier les tâches qui vous font perdre du temps et les transformer en processus automatisés. Vous gagnez en efficacité, améliorez vos performances et pouvez vous concentrer sur les actions qui génèrent réellement de la valeur pour votre entreprise.
+                        </p>
+                        <p class="etiquette2">
+                            AUTOMATISATION
+                        </p>
+                    </div>
+                </div>
+                <div class="question" id="question5">
+                    <div class="headquestion">
+                        <h3>
+                            Je prends des décisions marketing sans indicateurs clairs pour mesurer l’impact.
+                        </h3>
+
+                        <button class="btnfaq" id="openrep5">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640"><!--!Font Awesome Free v7.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2026 Fonticons, Inc.--><path fill="#F61F1F" d="M297.4 438.6C309.9 451.1 330.2 451.1 342.7 438.6L502.7 278.6C515.2 266.1 515.2 245.8 502.7 233.3C490.2 220.8 469.9 220.8 457.4 233.3L320 370.7L182.6 233.4C170.1 220.9 149.8 220.9 137.3 233.4C124.8 245.9 124.8 266.2 137.3 278.7L297.3 438.7z"/></svg>
+                        </button>
+                    </div>
+                    <div class="reponse">
+                        <p class="txtrep">
+                            Notre objectif est simple : identifier les tâches qui vous font perdre du temps et les transformer en processus automatisés. Vous gagnez en efficacité, améliorez vos performances et pouvez vous concentrer sur les actions qui génèrent réellement de la valeur pour votre entreprise.
+                        </p>
+                        <p class="etiquette2">
+                            AUTOMATISATION
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="contact">
+            <p class="etiquette3">
+                LES GOATS
+            </p>
+            <h2 class="titre_contact">
+                ENVIE D'AVANCER 
+                CONTACTEZ NOUS
             </h2>
-            <div style="height: 30vh; margin: 0;">
-                <p style="margin: 0 2vw 3vh 2vw; font-family: DxKordExp; font-size: 2vw; color: #F61F1F; text-align: center;">
-                    IMAGINEZ LA TÊTE DE VOS CONCURRENTS QUAND VOUS AUREZ FAIS APPEL À NOS SERVICES...
-                </p>
+            <p class="txtcontact">
+                PARLONS PROJETS AUTOUR D'UN BON CAFÉ
+            </p>
+            <div style="width: 100vw; height: 10vh; margin-top: 5vh;">
+                <button class="btn-3" >ON EN DISCUTE ?</button>
+                <img src="./haveabreak.png" alt="" style="width: 18vw; position: absolute; bottom: 0; right: 2vw;">
 
-                <button class="btn-2">ON EN DISCUTE ?</button>
             </div>
-        
+        </section>
+        <footer>
+            <p style="position:absolute; bottom: 0; font-family: DxKord; font-size:23vw; letter-spacing: 3px; color:#FFF9E7; width: 110vw; margin: 15vh 0 -13vh 0;">
+                LE LABO
+            </p>
+        </footer>
+    </div>
 
-            <img src="./bonhomme1.png" alt="" style="height:30vh; float: right;">
-        </div>
-    </section>
-
-    <section class="sections">
-        <div style="width: 66vw; float: right; margin-top: 0; overflow:none; height: 90vh;">
-            <img src="./img_service_1.png" alt="" style="height: 90vh; width: 100%; object-fit:cover;">
-            <p class="etiquettes" style="top:195vh; right:18.5vw; ">CONSULTING</p>
-            <p class="etiquettes" style="top:195vh; right:2vw; ">GROWTHACKING</p>
-        </div>
-        <div style="width: 34vw; margin-right: 66vw; margin-top: 0; height: 90vh;">
-            <h2 style="height: 25vh; margin: 0; font-size: 12vw;">
-                CONSULTING
-            </h2>
-            <div style="height: 30vh; margin: 0;">
-                <p style="margin: 0 2vw 3vh 2vw; font-family: DxKordExp; font-size: 2vw; color: #F61F1F; text-align: center;">
-                    IMAGINEZ LA TÊTE DE VOS CONCURRENTS QUAND VOUS AUREZ FAIS APPEL À NOS SERVICES...
-                </p>
-
-                <button class="btn-2">ON EN DISCUTE ?</button>
-            </div>
-        
-
-            <img src="./bonhomme1.png" alt="" style="height:30vh; float: left; transform: rotateY(180deg);">
-        </div>
-    </section>
-
-    <section class="sections">
-        <div style="width: 66vw; float: left; margin-top: 0; overflow:none; height: 90vh;">
-            <img src="./img_service_1.png" alt="" style="height: 90vh; width: 100%; object-fit:cover;">
-            <p class="etiquettes" style="top:285vh; left:2vw; ">SEO</p>
-            <p class="etiquettes" style="top:285vh; left:8.5vw; ">SEA</p>
-            <p class="etiquettes" style="top:285vh; left:15vw; ">ADS</p>
-        </div>
-        <div style="width: 34vw; margin-left: 66vw; margin-top: 0; height: 90vh;">
-            <h2 style="height: 25vh; margin: 0;">
-                SITE WEB
-            </h2>
-            <div style="height: 30vh; margin: 0;">
-                <p style="margin: 0 2vw 3vh 2vw; font-family: DxKordExp; font-size: 2vw; color: #F61F1F; text-align: center;">
-                    IMAGINEZ LA TÊTE DE VOS CONCURRENTS QUAND VOUS AUREZ FAIS APPEL À NOS SERVICES...
-                </p>
-
-                <button class="btn-2">ON EN DISCUTE ?</button>
-            </div>
-        
-
-            <img src="./bonhomme1.png" alt="" style="height:30vh; float: right;">
-        </div>
-    </section>
-
-    <section class="faq">
-        <div class="headfaq">
-            <img src="./bonhomme-help.png" alt="" style="position: absolute; width: 8vw; top:312vh; right: 23vw; rotate: calc(25deg); z-index: 2; width: 7vw;">
-            <h2 class="h2faq">
-                <span style="font-size: 3vw;">ON</span><span style="font-size: 5vw; margin-left: 0.5vw;">PEUT</span> T'AIDER ?!
-            </h2>
-        </div>
-        <div class="listeq">
-            <div class="question" id="question1">
-                <div class="headquestion">
-                    <h3>
-                        Je passe trop de temps sur des tâches qui ne créent pas de valeur pour mon entreprise.
-                    </h3>
-
-                    <button class="btnfaq" id="openrep1">
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640"><!--!Font Awesome Free v7.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2026 Fonticons, Inc.--><path fill="#F61F1F" d="M297.4 438.6C309.9 451.1 330.2 451.1 342.7 438.6L502.7 278.6C515.2 266.1 515.2 245.8 502.7 233.3C490.2 220.8 469.9 220.8 457.4 233.3L320 370.7L182.6 233.4C170.1 220.9 149.8 220.9 137.3 233.4C124.8 245.9 124.8 266.2 137.3 278.7L297.3 438.7z"/></svg>
-                    </button>
-                </div>
-                <div class="reponse">
-                    <p class="txtrep">
-                        Notre objectif est simple : identifier les tâches qui vous font perdre du temps et les transformer en processus automatisés. Vous gagnez en efficacité, améliorez vos performances et pouvez vous concentrer sur les actions qui génèrent réellement de la valeur pour votre entreprise.
-                    </p>
-                    <p class="etiquette2">
-                        AUTOMATISATION
-                    </p>
-                </div>
-            </div>
-            <div class="question" id="question2">
-                <div class="headquestion">
-                    <h3>
-                        Je passe trop de temps sur des tâches qui ne créent pas de valeur pour mon entreprise.
-                    </h3>
-
-                    <button class="btnfaq" id="openrep2">
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640"><!--!Font Awesome Free v7.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2026 Fonticons, Inc.--><path fill="#F61F1F" d="M297.4 438.6C309.9 451.1 330.2 451.1 342.7 438.6L502.7 278.6C515.2 266.1 515.2 245.8 502.7 233.3C490.2 220.8 469.9 220.8 457.4 233.3L320 370.7L182.6 233.4C170.1 220.9 149.8 220.9 137.3 233.4C124.8 245.9 124.8 266.2 137.3 278.7L297.3 438.7z"/></svg>
-                    </button>
-                </div>
-                <div class="reponse">
-                    <p class="txtrep">
-                        Notre objectif est simple : identifier les tâches qui vous font perdre du temps et les transformer en processus automatisés. Vous gagnez en efficacité, améliorez vos performances et pouvez vous concentrer sur les actions qui génèrent réellement de la valeur pour votre entreprise.
-                    </p>
-                    <p class="etiquette2">
-                        AUTOMATISATION
-                    </p>
-                </div>
-            </div>
-            <div class="question" id="question3">
-                <div class="headquestion">
-                    <h3>
-                        Je passe trop de temps sur des tâches qui ne créent pas de valeur pour mon entreprise.
-                    </h3>
-
-                    <button class="btnfaq" id="openrep3">
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640"><!--!Font Awesome Free v7.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2026 Fonticons, Inc.--><path fill="#F61F1F" d="M297.4 438.6C309.9 451.1 330.2 451.1 342.7 438.6L502.7 278.6C515.2 266.1 515.2 245.8 502.7 233.3C490.2 220.8 469.9 220.8 457.4 233.3L320 370.7L182.6 233.4C170.1 220.9 149.8 220.9 137.3 233.4C124.8 245.9 124.8 266.2 137.3 278.7L297.3 438.7z"/></svg>
-                    </button>
-                </div>
-                <div class="reponse">
-                    <p class="txtrep">
-                        Notre objectif est simple : identifier les tâches qui vous font perdre du temps et les transformer en processus automatisés. Vous gagnez en efficacité, améliorez vos performances et pouvez vous concentrer sur les actions qui génèrent réellement de la valeur pour votre entreprise.
-                    </p>
-                    <p class="etiquette2">
-                        AUTOMATISATION
-                    </p>
-                </div>
-            </div>
-            <div class="question" id="question4">
-                <div class="headquestion">
-                    <h3>
-                        Je passe trop de temps sur des tâches qui ne créent pas de valeur pour mon entreprise.
-                    </h3>
-
-                    <button class="btnfaq" id="openrep4">
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640"><!--!Font Awesome Free v7.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2026 Fonticons, Inc.--><path fill="#F61F1F" d="M297.4 438.6C309.9 451.1 330.2 451.1 342.7 438.6L502.7 278.6C515.2 266.1 515.2 245.8 502.7 233.3C490.2 220.8 469.9 220.8 457.4 233.3L320 370.7L182.6 233.4C170.1 220.9 149.8 220.9 137.3 233.4C124.8 245.9 124.8 266.2 137.3 278.7L297.3 438.7z"/></svg>
-                    </button>
-                </div>
-                <div class="reponse">
-                    <p class="txtrep">
-                        Notre objectif est simple : identifier les tâches qui vous font perdre du temps et les transformer en processus automatisés. Vous gagnez en efficacité, améliorez vos performances et pouvez vous concentrer sur les actions qui génèrent réellement de la valeur pour votre entreprise.
-                    </p>
-                    <p class="etiquette2">
-                        AUTOMATISATION
-                    </p>
-                </div>
-            </div>
-            <div class="question" id="question5">
-                <div class="headquestion">
-                    <h3>
-                        Je passe trop de temps sur des tâches qui ne créent pas de valeur pour mon entreprise.
-                    </h3>
-
-                    <button class="btnfaq" id="openrep5">
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640"><!--!Font Awesome Free v7.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2026 Fonticons, Inc.--><path fill="#F61F1F" d="M297.4 438.6C309.9 451.1 330.2 451.1 342.7 438.6L502.7 278.6C515.2 266.1 515.2 245.8 502.7 233.3C490.2 220.8 469.9 220.8 457.4 233.3L320 370.7L182.6 233.4C170.1 220.9 149.8 220.9 137.3 233.4C124.8 245.9 124.8 266.2 137.3 278.7L297.3 438.7z"/></svg>
-                    </button>
-                </div>
-                <div class="reponse">
-                    <p class="txtrep">
-                        Notre objectif est simple : identifier les tâches qui vous font perdre du temps et les transformer en processus automatisés. Vous gagnez en efficacité, améliorez vos performances et pouvez vous concentrer sur les actions qui génèrent réellement de la valeur pour votre entreprise.
-                    </p>
-                    <p class="etiquette2">
-                        AUTOMATISATION
-                    </p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="contact">
-        <p class="etiquette3">
-            LES GOATS
-        </p>
-        <h2 class="titre_contact">
-            ENVIE D'AVANCER 
-            CONTACTEZ NOUS
-        </h2>
-        <p class="txtcontact">
-            PARLONS PROJETS AUTOUR D'UN BON CAFÉ
-        </p>
-        <div style="width: 100vw; height: 10vh; margin-top: 5vh;">
-            <button class="btn-3" >ON EN DISCUTE ?</button>
-            <img src="./haveabreak.png" alt="" style="width: 18vw; position: absolute; bottom: 0; right: 2vw;">
-
-        </div>
-    </section>
-
-    <footer>
-        <p style="position:absolute; bottom: 0; font-family: DxKord; font-size:23vw; letter-spacing: 3px; color:#FFF9E7; width: 110vw; margin: 15vh 0 -13vh 0;">
-            LE LABO
-        </p>
-    </footer>
-
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.1/dist/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.1/dist/ScrollTrigger.min.js"></script>
     <script src="./script-services.js"></script>
 </body>
 </html>

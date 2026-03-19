@@ -15,6 +15,10 @@ const btn_q4 = document.getElementById("openrep4")
 const div_quest5 = document.getElementById("question5")
 const btn_q5 = document.getElementById("openrep5")
 
+let services = document.querySelectorAll(".sections2")
+
+gsap.registerPlugin(ScrollTrigger)
+
 btn_nav_hide.addEventListener("click", () => {
     navbar.classList.remove("open")
     setTimeout(() => {
@@ -82,5 +86,18 @@ div_quest5.addEventListener("click", () => {
     }else{
         div_quest5.classList.add("repopen")
         btn_q5.classList.add("open")
+    }
+})
+
+gsap.from(services, {
+    yPercent: 110,
+    stagger : 0.5,
+    scrollTrigger : {
+        trigger : '.sects',
+        start: "top top",
+        end: "+=1500",
+        scrub : true,
+        pin: true,
+        markers:true
     }
 })
