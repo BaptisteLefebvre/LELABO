@@ -8,17 +8,17 @@
 <style>
     @font-face {
         font-family: DxKord;
-        src: url(./FREE/DxKord-InktrapUltraExpanded.otf);
+        src: url(../FREE/DxKord-InktrapUltraExpanded.otf);
     }
 
     @font-face {
         font-family: DxKordExp;
-        src: url(./FREE/DxKord-InktrapExpanded.otf);
+        src: url(../FREE/DxKord-InktrapExpanded.otf);
     }
 
     @font-face {
         font-family: DxKordCompr;
-        src: url(./FREE/DxKord-InktrapCompressed.otf);
+        src: url(../FREE/DxKord-InktrapCompressed.otf);
     }
 
     body {
@@ -79,6 +79,28 @@
 
     #background-navbar.open {
         background-color: #18181949;
+    }
+
+    .arrow {
+        transition: transform 0.2s ease;
+    }
+
+    .link {
+        font-family: DxKord; 
+        text-decoration: none; 
+        color: #FFF9E750; 
+        font-size: 3vw; 
+        letter-spacing: 
+        0.10vw; 
+        width: 100%;
+    }
+
+    .link.active {
+        color: #FFF9E7;
+    }
+
+    .link.small {
+        font-size: 2.8vw;
     }
 
     .navbar {
@@ -398,15 +420,20 @@
             </div>
             
             <div class="navbar-corp">
-                <a href="" style="font-family: DxKord; text-decoration: none; color: #FFF9E7; font-size: 3vw; letter-spacing: 0.10vw; width: 100%;" >ACCUEIL</a>
-                <a href="" style="font-family: DxKord; text-decoration: none; color: #FFF9E7; font-size: 3vw; letter-spacing: 0.10vw; width: 100%;">À PROPOS</a>
-                <a href="" style="font-family: DxKord; text-decoration: none; color: #FFF9E7; font-size: 3vw; letter-spacing: 0.10vw; width: 100%;" >SERVICES</a>
-                <a href="" style="font-family: DxKord; text-decoration: none; color: #FFF9E7; font-size: 3vw; letter-spacing: 0.10vw; width: 100%;">NOTRE MÉTHODE</a>
-                <a href="" style="font-family: DxKord; text-decoration: none; color: #FFF9E7; font-size: 3vw; letter-spacing: 0.10vw; width: 100%;">CONTACT</a>
+                <a href="../index.html" class="link link-active" style="font-family: DxKord; text-decoration: none; color: #FFF9E7; font-size: 3vw; letter-spacing: 0.10vw; width: 100%;" >
+                    <svg style="width: 3vw; margin-right:0.5vw;" class="arrow" viewBox="0 0 160 111" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M3.42661 14.2684C-1.94939 7.52375 4.61447 -2.11668 12.8601 0.413241L153.295 43.5013C161.385 45.9835 161.619 57.351 153.637 60.1628L11.7285 110.153C3.66411 112.994 -3.28549 103.797 1.64969 96.815L29.6062 57.2637C31.8592 54.0764 31.7354 49.784 29.3026 46.7318L3.42661 14.2684Z" fill="#FFF9E7"/>
+                    </svg>
+                    ACCUEIL
+                </a>
+                <a href="" class="link">À PROPOS</a>
+                <a href="" class="link">SERVICES</a>
+                <a href="" class="link">NOTRE MÉTHODE</a>
+                <a href="" class="link">CONTACT</a>
             </div>
 
             <div class="navbar-bottom">
-                <img src="./bonhomme1.png" alt="" style="width: 7vw; margin-top: 10vh; margin-left: 15vw;">
+                <img src="../img/bonhomme1.png" alt="" style="width: 7vw; margin-top: 10vh; margin-left: 15vw;">
                 <p style="font-family: DxKord; color: #FFF9E7; font-size: 2.75vw; letter-spacing: 0.05vw; width: 100%; text-align: center; margin: 0; margin-top: 0.5vh;">
                     LE LABO
                 </p>
@@ -427,7 +454,7 @@
     <div class="sects" style="position: relative;">
         <section class="sections">
             <div style="width: 66vw; float: left; margin-top: 0; overflow:none; height: 100vh; position: relative;">
-                <img src="./img_service_1.png" alt="" style="height: 100vh; width: 100%; object-fit:cover;">
+                <img src="../img/img_service_1.png" alt="" style="height: 100vh; width: 100%; object-fit:cover;">
                 <p class="etiquettes" style="bottom:2vh; left:2vw; ">SEO</p>
                 <p class="etiquettes" style="bottom:2vh; left:8.5vw; ">SEA</p>
                 <p class="etiquettes" style="bottom:2vh; left:15vw; ">ADS</p>
@@ -445,13 +472,13 @@
                 </div>
             
 
-                <img src="./bonhomme1.png" alt="" style="height:30vh; float: right;">
+                <img src="../img/bonhomme1.png" alt="" style="height:30vh; float: right;">
             </div>
         </section>
 
         <section class="sections sections2">
             <div style="width: 66vw; float: right; margin-top: 0; overflow:none; height: 100vh; position: relative;">
-                <img src="./img_service_1.png" alt="" style="height: 100vh; width: 100%; object-fit:cover;">
+                <img src="../img/img_service_1.png" alt="" style="height: 100vh; width: 100%; object-fit:cover;">
                 <p class="etiquettes" style="bottom:2vh; right:18.5vw; ">CONSULTING</p>
                 <p class="etiquettes" style="bottom:2vh; right:2vw; ">GROWTHACKING</p>
             </div>
@@ -468,13 +495,13 @@
                 </div>
             
 
-                <img src="./bonhomme1.png" alt="" style="height:30vh; float: left; transform: rotateY(180deg);">
+                <img src="../img/bonhomme1.png" alt="" style="height:30vh; float: left; transform: rotateY(180deg);">
             </div>
         </section>
 
         <section class="sections sections2">
             <div style="width: 66vw; float: left; margin-top: 0; overflow:none; height: 100vh; position: relative;">
-                <img src="./img_service_1.png" alt="" style="height: 100vh; width: 100%; object-fit:cover;">
+                <img src="../img/img_service_1.png" alt="" style="height: 100vh; width: 100%; object-fit:cover;">
                 <p class="etiquettes" style="bottom:2vh; left:2vw; ">SEO</p>
                 <p class="etiquettes" style="bottom:2vh; left:8.5vw; ">SEA</p>
                 <p class="etiquettes" style="bottom:2vh; left:15vw; ">ADS</p>
@@ -492,12 +519,12 @@
                 </div>
             
 
-                <img src="./bonhomme1.png" alt="" style="height:30vh; float: right;">
+                <img src="../img/bonhomme1.png" alt="" style="height:30vh; float: right;">
             </div>
         </section>
         <section class="faq sections2">
             <div class="headfaq">
-                <img src="./bonhomme-help.png" alt="" style="position: absolute; width: 8vw; top:12vh; right: 24vw; rotate: calc(25deg); z-index: 2; width: 7vw;">
+                <img src="../img/bonhomme-help.png" alt="" style="position: absolute; width: 8vw; top:12vh; right: 24vw; rotate: calc(25deg); z-index: 2; width: 7vw;">
                 <h2 class="h2faq">
                     <span style="font-size: 3vw;">ON</span><span style="font-size: 5vw; margin-left: 0.5vw;">PEUT</span> T'AIDER ?!
                 </h2>
@@ -613,7 +640,7 @@
             </p>
             <div style="width: 100vw; height: 10vh; margin-top: 5vh;">
                 <button class="btn-3" >ON EN DISCUTE ?</button>
-                <img src="./haveabreak.png" alt="" style="width: 18vw; position: absolute; bottom: 0; right: 2vw;">
+                <img src="../img/haveabreak.png" alt="" style="width: 18vw; position: absolute; bottom: 0; right: 2vw;">
 
             </div>
         </section>
