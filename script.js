@@ -20,7 +20,7 @@ const btn_q4 = document.getElementById("openrep4")
 const div_quest5 = document.getElementById("question5")
 const btn_q5 = document.getElementById("openrep5")
 
-const sect2 = document.querySelector(".secteur2")
+const triggernuage = document.querySelector("#start-nuage")
 const nuage1 = document.querySelector(".nuage1")
 const nuage2 = document.querySelector(".nuage2")
 const nuage3 = document.querySelector(".nuage3")
@@ -58,21 +58,21 @@ btn_nav_activ.addEventListener("click", () => {
 gsap.to(nuage1, {
     xPercent : -100,
     scrollTrigger : {
-        trigger : sect2,
+        trigger : triggernuage,
         toggleActions : "play none none none",
-        start : "top 100%",
-        end : "top 20%",
-        scrub : 1,
+        start : "top 30%",
+        end : "top",
+        scrub : 1
     }
 })
 
 gsap.to(nuage2, {
     xPercent : -200,
     scrollTrigger : {
-        trigger : sect2,
+        trigger : triggernuage,
         toggleActions : "play none none none",
-        start : "top 100%",
-        end : "top 20%",
+        start : "top 30%",
+        end : "top",
         scrub : 1,
     }
 })
@@ -80,10 +80,10 @@ gsap.to(nuage2, {
 gsap.to(nuage3, {
     xPercent : 200,
     scrollTrigger : {
-        trigger : sect2,
+        trigger : triggernuage,
         toggleActions : "play none none none",
-        start : "top 100%",
-        end : "top 20%",
+        start : "top 30%",
+        end : "top",
         scrub : 1,
     }
 })
@@ -91,11 +91,11 @@ gsap.to(nuage3, {
 gsap.to(nuage4, {
     xPercent : 100,
     scrollTrigger : {
-        trigger : sect2,
+        trigger : triggernuage,
         toggleActions : "play none none none",
-        start : "top 100%",
-        end : "top 20%",
-        scrub : 1,
+        start : "top 30%",
+        end : "top",
+        scrub : 1
     }
 })
 
@@ -103,19 +103,10 @@ gsap.from(selection[0].words, {
     color: "rgb(212,22,24,0.2)",
     stagger: 0.5,
     scrollTrigger: {
-        trigger: ".test-reveal",
-        scrub: true,
-        end : "top 20%",
-    }
-})
-
-gsap.from(selection2[0].words, {
-    color: "rgb(255,249,231,0.2)",
-    stagger: 0.5,
-    scrollTrigger: {
         trigger: ".test-reveal2",
         scrub: true,
-        end : "top 20%",
+        start: "top 85%",
+        end : "top 300%"
     }
 })
 
@@ -127,7 +118,18 @@ gsap.from(cards, {
         start: "top top",
         end: "+=3000",
         scrub : true,
-        pin: true,
+        pin: true
+    }
+})
+
+gsap.from(selection2[0].words, {
+    color: "#FFF9E750",
+    stagger: 0.5,
+    scrollTrigger: {
+        trigger: ".test-reveal2",
+        scrub: true,
+        start: "top 85%",
+        end : "top 15%"
     }
 })
 
