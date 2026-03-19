@@ -103,10 +103,10 @@ gsap.from(selection[0].words, {
     color: "rgb(212,22,24,0.2)",
     stagger: 0.5,
     scrollTrigger: {
-        trigger: ".test-reveal2",
+        trigger: ".test-reveal",
         scrub: true,
         start: "top 85%",
-        end : "top 300%"
+        end : "top 15%"
     }
 })
 
