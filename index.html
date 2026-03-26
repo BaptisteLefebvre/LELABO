@@ -313,15 +313,13 @@
     }
 
     .cardmethod {
-        width: 35vw;
-        height:18vh;
+        width: 18.5vw;
+        height:45vh;
         border:none;
         border-radius: 1vw;
-        margin-top: 0.5vh;
-        margin-left: 60vw;
-        display: flex; 
-        align-items: center;
+        margin-left: 8vw;
         position: absolute;
+        box-shadow: 0 5px 5px rgba(0, 0, 0, 0.25);
     }
 
     .secteur6 {
@@ -402,6 +400,57 @@
         position: relative;
         background-color: #181819;
         overflow: hidden;
+    }
+
+    .carousel {
+        position: absolute;
+        z-index: 2;
+        bottom: 1vh;
+        left: -1vw;
+        transform: rotate(4.14deg);
+        background-color: #F61F1F;
+        max-width: 300vw;
+        display: flex;
+        overflow: hidden;
+        > * {
+            flex: 0 0 100%;
+        }
+    }
+
+    .carousel-2 {
+        position: absolute;
+        z-index: 2;
+        bottom: 1vh;
+        left: -1vw;
+        transform: rotate(-4.14deg);
+        background-color: #181819;
+        max-width: 300vw;
+        display: flex;
+        overflow: hidden;
+        > * {
+            flex: 0 0 100%;
+        }
+    }
+
+    .group {
+        padding: 3vh 0 2vh 0;
+        font-family: DxKord;
+        font-size: 3.5vw;
+        letter-spacing: 0.15vw;
+        color: #FFF9E7;
+        margin: 0;
+        max-height: 7vh;
+        will-change: transform;
+        animation: scrolling 15s linear infinite;
+    }
+
+    @keyframes scrolling {
+        0% {
+        transform: translateX(0);
+        }
+        100% {
+        transform: translateX(-100%);
+        }
     }
 
 </style>
@@ -551,30 +600,61 @@
                 </div>
             </div>
         </div>
-        <div class="container3-sect2">
-            <p style="position:absolute; z-index:2; top: 5vh; left:-1vw; transform: rotate(4.14deg); background-color: #F61F1F; padding:3vh 3vw 2vh 3vw; font-family: DxKord; font-size: 3.5vw; letter-spacing: 0.15vw; width:130vw; color:#FFF9E7;">
-                <span>SEO</span>
-                <img src="./img/bonhomme1.png" alt="" style="width: 3vw;">
+        
+        <div class="carousel">
+            <p class="group">
+                <span>SEO
+                <img src="./img/bonhomme1.png" alt="" style="width: 2.5vw;">
                 <span>SEA</span>
-                <img src="./img/bonhomme1.png" alt="" style="width: 3vw;">
+                <img src="./img/bonhomme1.png" alt="" style="width: 2.5vw;">
                 <span>ADS</span>
-                <img src="./img/bonhomme1.png" alt="" style="width: 3vw;">
+                <img src="./img/bonhomme1.png" alt="" style="width: 2.5vw;">
                 <span>SITE WEB</span>
-                <img src="./img/bonhomme1.png" alt="" style="width: 3vw;">
+                <img src="./img/bonhomme1.png" alt="" style="width: 2.5vw;">
                 <span>AUTOMATISATION</span>
+                <img src="./img/bonhomme1.png" alt="" style="width: 2.5vw;">
             </p>
-            <p style="position:absolute; z-index:3; left:-1vw; transform: rotate(-4.14deg); background-color: #181819; padding:3vh 3vw 2vh 3vw; font-family: DxKord; font-size: 3.5vw; letter-spacing: 0.15vw; width:130vw; color:#FFF9E7;">
-                <span>SEO</span>
-                <img src="./img/bonhomme1.png" alt="" style="width: 3vw;">
+            <p aria-hidden class="group">
+                <span>SEO
+                <img src="./img/bonhomme1.png" alt="" style="width: 2.5vw;">
                 <span>SEA</span>
-                <img src="./img/bonhomme1.png" alt="" style="width: 3vw;">
+                <img src="./img/bonhomme1.png" alt="" style="width: 2.5vw;">
                 <span>ADS</span>
-                <img src="./img/bonhomme1.png" alt="" style="width: 3vw;">
+                <img src="./img/bonhomme1.png" alt="" style="width: 2.5vw;">
                 <span>SITE WEB</span>
-                <img src="./img/bonhomme1.png" alt="" style="width: 3vw;">
+                <img src="./img/bonhomme1.png" alt="" style="width: 2.5vw;">
                 <span>AUTOMATISATION</span>
+                <img src="./img/bonhomme1.png" alt="" style="width: 2.5vw;">
             </p>
         </div>
+
+        <div class="carousel-2">
+            <p class="group">
+                <span>SEO
+                <img src="./img/bonhomme1.png" alt="" style="width: 2.5vw;">
+                <span>SEA</span>
+                <img src="./img/bonhomme1.png" alt="" style="width: 2.5vw;">
+                <span>ADS</span>
+                <img src="./img/bonhomme1.png" alt="" style="width: 2.5vw;">
+                <span>SITE WEB</span>
+                <img src="./img/bonhomme1.png" alt="" style="width: 2.5vw;">
+                <span>AUTOMATISATION</span>
+                <img src="./img/bonhomme1.png" alt="" style="width: 2.5vw;">
+            </p>
+            <p aria-hidden class="group">
+                <span>SEO
+                <img src="./img/bonhomme1.png" alt="" style="width: 2.5vw;">
+                <span>SEA</span>
+                <img src="./img/bonhomme1.png" alt="" style="width: 2.5vw;">
+                <span>ADS</span>
+                <img src="./img/bonhomme1.png" alt="" style="width: 2.5vw;">
+                <span>SITE WEB</span>
+                <img src="./img/bonhomme1.png" alt="" style="width: 2.5vw;">
+                <span>AUTOMATISATION</span>
+                <img src="./img/bonhomme1.png" alt="" style="width: 2.5vw;">
+            </p>
+        </div>
+        
     </section>
 
     <svg style="width:100vw; margin-top:-1vh;" viewBox="0 0 2042 781" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -719,42 +799,72 @@
     </svg>
 
     <section class="secteur5">
-        <p style="position:absolute; font-family: DxKord; font-size: 5.5vw; letter-spacing: 0.15vw; margin-top:35vh; width: 40vw; margin-left: 5vw; color:#FFF9E7;">
-            NOTRE
-        </p>
-        <p style="position:absolute; font-family: DxKord; font-size: 5.5vw; letter-spacing: 0.15vw; margin-top:48vh; width: 40vw; margin-left: 5vw; color:#FFF9E7;">
+        <div style="width: 8.5vw; background-color: #FFF9E7; margin-left:45.75vw; position: absolute; border-radius: 5px; top:7vh;">
+            <p style="font-family: DxKord; font-size: 0.75vw; letter-spacing: 0.1vw; color: #F61F1F; text-align: center; padding: 0.75vh 0.5vw 0.5vh 0.5vw; margin: 0;">
+                5 ÉTAPES CLÉS
+            </p>
+        </div>
+        <p style="position:absolute; font-family: DxKord; font-size: 110px; letter-spacing: 3px; margin-top:12vh; width: 100vw; color:#FFF9E7; text-align: center;">
             MÉTHODOLOGIE
         </p>
+        <p style="position:absolute; font-family: DxKord; font-size: 0.85vw; letter-spacing: 0.1vw; top:22vh; width: 100vw;  color:#FFF9E7; text-align: center;">
+            TRAVAILLONS ENSEMBLE
+        </p>
+        <img style="width: 20vw; filter: drop-shadow(-5vh 5vh 10px rgba(0,0,0,0.25)); transform: rotate(-20deg); margin-top: 7vh; margin-left: -2vw; float: left;" src="./img/bonhomme2.png" alt="">
+        <img style="width: 18vw; filter: drop-shadow(5vh 5vh 10px rgba(0,0,0,0.25)); transform: rotate(30deg); margin-top: 14vh; margin-right: -0.75vw; float: right;" src="./img/bonhomme-help.png" alt="">
+        
 
-        <div class="cardmethod cardmethod-transi" style="background-color: #FFF9E7; transform: rotate(4deg); top: 35vh;">
-            <p style="font-family: DxKord; font-size: 3.8vw; width: 100%; margin-left: 2vw; color:#F61F1F;">
-                1 On échanges
-            </p>
-            <img src="./img/bonhomme2.png" alt="" style="position: absolute; width: 10vh; right:1vw; top: 8vh;">
+        <div class="cardmethod cardmethod-transi" style="background-color: #FFF9E7; top: 40vh;">
+            <div style="position: relative; height: 38vh;">
+                <p style="font-family: DxKord; font-size: 2.4vw; width: 80%; margin-left: 2vw; color:#F61F1F; margin-top: 5vh;">
+                    ON ÉCHANGE
+                </p>
+                <p style="font-family: Arial, Helvetica, sans-serif; font-size: 1vw; width: 80%; margin-left: 2vw; color:#181819; position: absolute; bottom: 0;">
+                    Guiding clients to their milestones through media management.
+                </p>
+            </div>
         </div>
-        <div class="cardmethod cardmethod-transi" style="background-color: #181819; transform: rotate(-4deg); top: 36vh;">
-            <p style="font-family: DxKord; font-size: 3.8vw; width: 100%; margin-left: 2vw; color:#FFF9E7;">
-                2 On propose
-            </p>
-            <img src="./img/bonhomme2.png" alt="" style="position: absolute; width: 10vh; right:1vw; top: 8vh;">
+        <div class="cardmethod cardmethod-transi" style="background-color: #181819; transform: rotate(-6deg); left: 16.5vw; top: 38vh;">
+            <div style="position: relative; height: 38vh;">
+                <p style="font-family: DxKord; font-size: 2.4vw; width: 80%; margin-left: 2vw; color:#FFF9E7; margin-top: 5vh;">
+                    ON PROPOSE
+                </p>
+                <p style="font-family: Arial, Helvetica, sans-serif; font-size: 1vw; width: 80%; margin-left: 2vw; color:#FFF9E7; position: absolute; bottom: 0;">
+                    Guiding clients to their milestones through media management.
+                </p>
+                <img style="width: 4vw; position: absolute; top: -8vh; left: -1.5vw; filter: drop-shadow(-0.2vh 1vh 2px rgba(0,0,0,0.25)); transform: rotate(40deg);" src="./img/bonhomme2.png" alt="">
+            </div>
         </div>
-        <div class="cardmethod cardmethod-transi" style="background-color: #A1C8FE; transform: rotate(4deg); top: 37vh;">
-            <p style="font-family: DxKord; font-size: 3.8vw; width: 100%; margin-left: 2vw; color:#FFF9E7;">
-                3 On installe
-            </p>
-            <img src="./img/bonhomme2.png" alt="" style="position: absolute; width: 10vh; right:1vw; top: 8vh;">
+        <div class="cardmethod cardmethod-transi" style="background-color: #A1C8FE; transform: rotate(5deg); left: 32.5vw; top: 37vh;">
+            <div style="position: relative; height: 38vh;">
+                <p style="font-family: DxKord; font-size: 2.4vw; width: 80%; margin-left: 2vw; color:#181819; margin-top: 5vh;">
+                    ON INSTALLE
+                </p>
+                <p style="font-family: Arial, Helvetica, sans-serif; font-size: 1vw; width: 80%; margin-left: 2vw; color:#181819; position: absolute; bottom: 0;">
+                    Guiding clients to their milestones through media management.
+                </p>
+            </div>
         </div>
-        <div class="cardmethod cardmethod-transi" style="background-color: #181819; transform: rotate(-4deg); top: 38vh;">
-            <p style="font-family: DxKord; font-size: 3.8vw; width: 100%; margin-left: 2vw; color:#FFF9E7;">
-                4 On analyse
-            </p>
-            <img src="./img/bonhomme2.png" alt="" style="position: absolute; width: 10vh; right:1vw; top: 8vh;">
+        <div class="cardmethod cardmethod-transi" style="background-color: #181819; transform: rotate(-5deg); left: 48vw; top: 37.5vh;">
+            <div style="position: relative; height: 38vh;">
+                <p style="font-family: DxKord; font-size: 2.4vw; width: 80%; margin-left: 2vw; color:#FFF9E7; margin-top: 5vh;">
+                    ON ANALYSE
+                </p>
+                <p style="font-family: Arial, Helvetica, sans-serif; font-size: 1vw; width: 80%; margin-left: 2vw; color:#FFF9E7; position: absolute; bottom: 0;">
+                    Guiding clients to their milestones through media management.
+                </p>
+            </div>
         </div>
-        <div class="cardmethod cardmethod-transi" style="background-color: #FFF9E7; transform: rotate(4deg); top: 39vh;">
-            <p style="font-family: DxKord; font-size: 3.8vw; width: 100%; margin-left: 2vw; color:#F61F1F;">
-                5 On optimise
-            </p>
-            <img src="./img/bonhomme2.png" alt="" style="position: absolute; width: 10vh; right:1vw; top: 8vh;">
+        <div class="cardmethod cardmethod-transi" style="background-color: #FFF9E7; transform: rotate(6deg); left: 64vw; top: 40vh;">
+            <div style="position: relative; height: 38vh;">
+                <p style="font-family: DxKord; font-size: 2.4vw; width: 80%; margin-left: 2vw; color:#F61F1F; margin-top: 5vh;">
+                    ON OPTIMISE
+                </p>
+                <p style="font-family: Arial, Helvetica, sans-serif; font-size: 1vw; width: 80%; margin-left: 2vw; color:#181819; position: absolute; bottom: 0;">
+                    Guiding clients to their milestones through media management.
+                </p>
+                <img style="width: 4vw; position: absolute; bottom: -4vh; left: -1.5vw; filter: drop-shadow(-0.3vh 1.5vh 2px rgba(0,0,0,0.25)); transform: rotate(30deg);" src="./img/bonhomme-help.png" alt="">
+            </div>
         </div>
 
     </section>

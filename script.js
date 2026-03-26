@@ -144,11 +144,11 @@ gsap.from(selection[0].words, {
 
 gsap.from(cards, {
     yPercent: 200,
-    stagger : 1,
+    stagger : 0.5,
     scrollTrigger : {
         trigger : '.container2-sect2',
         start: "top top",
-        end: "+=3000",
+        end: "+=1500",
         scrub : true,
         pin: true
     }
@@ -178,12 +178,12 @@ gsap.from(cardservices, {
 })
 
 gsap.from(cardmethods, {
-    xPercent: 150,
+    yPercent: 170,
     stagger : 0.5,
     scrollTrigger : {
         trigger : '.secteur5',
         start: "top top",
-        end: "+=3000",
+        end: "+=2000",
         scrub : true,
         pin: true,
     }
