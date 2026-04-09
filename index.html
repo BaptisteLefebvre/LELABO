@@ -206,20 +206,19 @@
     }
 
     .card {
-        color: #FFF9E7;
-        width: 20vw;
-        height: 42vh;
+        width: 25vw;
+        height: 32vh;
         border: 0;
-        padding: 2vh 2vw;
-        border-radius: 20px;
+        border-radius: 20px 20px 0 0;
         font-family: DxKord;
-        font-size: 2.6vw;
-        box-shadow: 0 1vw 0.2vw  #18181949;
+        font-size: 2vw;
+        box-shadow: 0.5vw 1vw 0.1vw  #18181949;
         position: absolute;
+        overflow: hidden;
     }
 
     #card-blue1 {
-        background-color: #A1C8FE;
+        background-color: #FFF9E7;
         z-index: 1;
         top:25vh; 
         left:10.5vw;
@@ -229,29 +228,29 @@
         background-color: #A1C8FE;
         z-index: 1;
         top:20vh; 
-        left:48vw;
-    }
-
-    #card-bordeau {
-        background-color: #D41618;
-        z-index: 2;
-        left:30vw;
-        top:10vh;
+        left:39vw;
     }
 
     #card-red {
         background-color: #F61F1F;
-        z-index: 4;
-        top:35vh; 
-        left:40vw;
-        
+        z-index: 3;
+        left:25vw;
+        top:37vh;
+        box-shadow: none;
     }
 
     #card-black {
-        background-color: #181819;
-        z-index: 3;
-        top:45vh; 
-        left:20vw;
+        background-color: #FFF9E7;
+        z-index: 2;
+        top:52vh; 
+        left:10.5vw;
+    }
+
+    #card-black2 {
+        background-color: #FFF9E7;
+        z-index: 2;
+        top:51vh; 
+        left:40vw;
     }
 
     .secteur3 {
@@ -403,7 +402,7 @@
     .carousel {
         position: absolute;
         z-index: 2;
-        bottom: 1vh;
+        bottom: 4vh;
         left: -1vw;
         transform: rotate(4.14deg);
         background-color: #F61F1F;
@@ -418,7 +417,7 @@
     .carousel-2 {
         position: absolute;
         z-index: 2;
-        bottom: 1vh;
+        bottom: 4vh;
         left: -1vw;
         transform: rotate(-4.14deg);
         background-color: #181819;
@@ -640,30 +639,125 @@
             <img class="bonhommesect2" src="./img/bonhomme.png" alt="" style="width:30vw; position: absolute; top:45vh; right:1vw;">
 
             <div class="cards">
-                <div class="card" id="card-blue1" style="transform: rotate(-15deg);">
-                    <p>
-                        ON TRANSFORME VOS IDÉES EN PROJETS ET C'EST CONCRET
-                    </p>
+                <div class="card" id="card-blue1" style="transform: rotate(-5deg);">
+                    <div style="position: relative;"> 
+                        <p style="margin-top: 2vh; margin-left: 2vw; color: #A1C8FE;">
+                        POUR DES RÉSULTATS QUI DONNE LE SMILE
+                        </p>
+                        <svg style="width: 25.7vw; position:absolute; margin-left:-0.3vw; transform: rotate(3.9deg); top:3vh; z-index:1;" viewBox="0 0 527 206" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M135.848 175.754L148.336 155.724C167.543 124.914 214.649 134.177 220.761 169.966L242.582 189.965L163.926 195.327L135.848 175.754Z" fill="#A1C8FE"/>
+                        <path d="M280.487 164.224C285.92 121.061 344.458 111.933 362.774 151.392L366.024 158.392L367.61 181.661L282.073 187.492L280.487 164.224Z" fill="#A1C8FE"/>
+                        <path d="M439.061 153.413C444.494 110.251 503.032 101.122 521.348 140.581L524.598 147.582L526.184 170.851L440.647 176.682L439.061 153.413Z" fill="#A1C8FE"/>
+                        <path d="M359.226 158.851L359.594 156.336C365.367 116.877 411.936 98.7503 442.867 123.923L467.134 151.495L446.436 176.287L360.813 182.124L359.226 158.851Z" fill="#A1C8FE"/>
+                        <path d="M10.0492 182.461L12.6276 171.363C21.078 134.991 69.9145 128.169 88.0089 160.833L97.1709 199.878L11.6341 205.709L10.0492 182.461Z" fill="#A1C8FE"/>
+                        <path d="M204.817 169.328C219.918 143.495 254.1 136.484 278.152 154.288L290.573 163.482L292.163 186.804L206.407 192.65L204.817 169.328Z" fill="#A1C8FE"/>
+                        <path d="M73.5955 177.309L87.235 147.694C100.013 119.95 140.938 125.261 146.211 155.348L182.94 194.25L97.1834 200.096L73.5955 177.309Z" fill="#A1C8FE"/>
+                        </svg>
+                        <div style="background-color: #A1C8FE; position: absolute; z-index: 2; top:20vh; width: 100%;">
+                            <p style="color: #FFF9E7; font-size: 0.6vw; width: 60%; margin-left: 1.5vw; letter-spacing: 0.05vw; line-height: 1.5vh;">
+                                À MOINS QUE CE NE SOIENT VOS CONCURRENTS QUI NOUS CONTACTENT EN PREMIER...
+                            </p>
+                            <p style="color: #FFF9E7; font-size: 1vw; width: 98%; text-align: end; margin-top: 0;">
+                                LE LABO
+                            </p>
+                        </div>
+                    </div>
                 </div>
-                <div class="card card-transi" id="card-blue2" style="transform: rotate(15deg);">
-                    <p>
-                        ON TRANSFORME VOS IDÉES EN PROJETS ET C'EST CONCRET
-                    </p>
-                </div>
-                <div class="card card-transi" id="card-bordeau">
-                    <p>
-                        ON TRANSFORME VOS IDÉES EN PROJETS ET C'EST CONCRET
-                    </p>
+                <div class="card card-transi" id="card-blue2" style="transform: rotate(-21deg);">
+                    <div style="position: relative;"> 
+                        <p style="margin-top: 2vh; margin-left: 2vw; color: #FFF9E7;">
+                        POUR DES RÉSULTATS QUI DONNE LE SMILE
+                        </p>
+                        <svg style="width: 25.7vw; position:absolute; margin-left:-0.3vw; transform: rotate(3.9deg); top:3vh; z-index:1;" viewBox="0 0 527 206" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M135.848 175.754L148.336 155.724C167.543 124.914 214.649 134.177 220.761 169.966L242.582 189.965L163.926 195.327L135.848 175.754Z" fill="#FFF9E7"/>
+                        <path d="M280.487 164.224C285.92 121.061 344.458 111.933 362.774 151.392L366.024 158.392L367.61 181.661L282.073 187.492L280.487 164.224Z" fill="#FFF9E7"/>
+                        <path d="M439.061 153.413C444.494 110.251 503.032 101.122 521.348 140.581L524.598 147.582L526.184 170.851L440.647 176.682L439.061 153.413Z" fill="#FFF9E7"/>
+                        <path d="M359.226 158.851L359.594 156.336C365.367 116.877 411.936 98.7503 442.867 123.923L467.134 151.495L446.436 176.287L360.813 182.124L359.226 158.851Z" fill="#FFF9E7"/>
+                        <path d="M10.0492 182.461L12.6276 171.363C21.078 134.991 69.9145 128.169 88.0089 160.833L97.1709 199.878L11.6341 205.709L10.0492 182.461Z" fill="#FFF9E7"/>
+                        <path d="M204.817 169.328C219.918 143.495 254.1 136.484 278.152 154.288L290.573 163.482L292.163 186.804L206.407 192.65L204.817 169.328Z" fill="#FFF9E7"/>
+                        <path d="M73.5955 177.309L87.235 147.694C100.013 119.95 140.938 125.261 146.211 155.348L182.94 194.25L97.1834 200.096L73.5955 177.309Z" fill="#FFF9E7"/>
+                        </svg>
+                        <div style="background-color: #FFF9E7; position: absolute; z-index: 2; top:20vh; width: 100%;">
+                            <p style="color: #A1C8FE; font-size: 0.6vw; width: 60%; margin-left: 1.5vw; letter-spacing: 0.05vw; line-height: 1.5vh;">
+                                À MOINS QUE CE NE SOIENT VOS CONCURRENTS QUI NOUS CONTACTENT EN PREMIER...
+                            </p>
+                            <p style="color: #A1C8FE; font-size: 1vw; width: 98%; text-align: end; margin-top: 0;">
+                                LE LABO
+                            </p>
+                        </div>
+                    </div>
                 </div>
                 <div class="card card-transi" id="card-black" style="transform: rotate(15deg);">
-                    <p>
-                        ON TRANSFORME VOS IDÉES EN PROJETS ET C'EST CONCRET
-                    </p>
+                    <div style="position: relative;"> 
+                        <p style="margin-top: 2vh; margin-left: 2vw; color: #F61F1F;">
+                        POUR DES RÉSULTATS QUI DONNE LE SMILE
+                        </p>
+                        <svg style="width: 25.7vw; position:absolute; margin-left:-0.3vw; transform: rotate(3.9deg); top:3vh; z-index:1;" viewBox="0 0 527 206" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M135.848 175.754L148.336 155.724C167.543 124.914 214.649 134.177 220.761 169.966L242.582 189.965L163.926 195.327L135.848 175.754Z" fill="#181819"/>
+                        <path d="M280.487 164.224C285.92 121.061 344.458 111.933 362.774 151.392L366.024 158.392L367.61 181.661L282.073 187.492L280.487 164.224Z" fill="#181819"/>
+                        <path d="M439.061 153.413C444.494 110.251 503.032 101.122 521.348 140.581L524.598 147.582L526.184 170.851L440.647 176.682L439.061 153.413Z" fill="#181819"/>
+                        <path d="M359.226 158.851L359.594 156.336C365.367 116.877 411.936 98.7503 442.867 123.923L467.134 151.495L446.436 176.287L360.813 182.124L359.226 158.851Z" fill="#181819"/>
+                        <path d="M10.0492 182.461L12.6276 171.363C21.078 134.991 69.9145 128.169 88.0089 160.833L97.1709 199.878L11.6341 205.709L10.0492 182.461Z" fill="#181819"/>
+                        <path d="M204.817 169.328C219.918 143.495 254.1 136.484 278.152 154.288L290.573 163.482L292.163 186.804L206.407 192.65L204.817 169.328Z" fill="#181819"/>
+                        <path d="M73.5955 177.309L87.235 147.694C100.013 119.95 140.938 125.261 146.211 155.348L182.94 194.25L97.1834 200.096L73.5955 177.309Z" fill="#181819"/>
+                        </svg>
+                        <div style="background-color: #181819; position: absolute; z-index: 2; top:20vh;">
+                            <p style="color: #FFF9E7; font-size: 0.6vw; width: 60%; margin-left: 1.5vw; letter-spacing: 0.05vw; line-height: 1.5vh;">
+                                À MOINS QUE CE NE SOIENT VOS CONCURRENTS QUI NOUS CONTACTENT EN PREMIER...
+                            </p>
+                            <p style="color: #FFF9E7; font-size: 1vw; width: 95%; text-align: end; margin-top: 0;">
+                                LE LABO
+                            </p>
+                        </div>
+                    </div>
                 </div>
-                <div class="card card-transi" id="card-red" style="transform: rotate(-15deg);">
-                    <p>
-                        ON TRANSFORME VOS IDÉES EN PROJETS ET C'EST CONCRET
-                    </p>
+                <div class="card card-transi" id="card-black2" style="transform: rotate(-7deg);">
+                    <div style="position: relative;"> 
+                        <p style="margin-top: 2vh; margin-left: 2vw; color: #181819;">
+                        POUR DES RÉSULTATS QUI DONNE LE SMILE
+                        </p>
+                        <svg style="width: 25.7vw; position:absolute; margin-left:-0.3vw; transform: rotate(3.9deg); top:3vh; z-index:1;" viewBox="0 0 527 206" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M135.848 175.754L148.336 155.724C167.543 124.914 214.649 134.177 220.761 169.966L242.582 189.965L163.926 195.327L135.848 175.754Z" fill="#181819"/>
+                        <path d="M280.487 164.224C285.92 121.061 344.458 111.933 362.774 151.392L366.024 158.392L367.61 181.661L282.073 187.492L280.487 164.224Z" fill="#181819"/>
+                        <path d="M439.061 153.413C444.494 110.251 503.032 101.122 521.348 140.581L524.598 147.582L526.184 170.851L440.647 176.682L439.061 153.413Z" fill="#181819"/>
+                        <path d="M359.226 158.851L359.594 156.336C365.367 116.877 411.936 98.7503 442.867 123.923L467.134 151.495L446.436 176.287L360.813 182.124L359.226 158.851Z" fill="#181819"/>
+                        <path d="M10.0492 182.461L12.6276 171.363C21.078 134.991 69.9145 128.169 88.0089 160.833L97.1709 199.878L11.6341 205.709L10.0492 182.461Z" fill="#181819"/>
+                        <path d="M204.817 169.328C219.918 143.495 254.1 136.484 278.152 154.288L290.573 163.482L292.163 186.804L206.407 192.65L204.817 169.328Z" fill="#181819"/>
+                        <path d="M73.5955 177.309L87.235 147.694C100.013 119.95 140.938 125.261 146.211 155.348L182.94 194.25L97.1834 200.096L73.5955 177.309Z" fill="#181819"/>
+                        </svg>
+                        <div style="background-color: #181819; position: absolute; z-index: 2; top:20vh;">
+                            <p style="color: #FFF9E7; font-size: 0.6vw; width: 60%; margin-left: 1.5vw; letter-spacing: 0.05vw; line-height: 1.5vh;">
+                                À MOINS QUE CE NE SOIENT VOS CONCURRENTS QUI NOUS CONTACTENT EN PREMIER...
+                            </p>
+                            <p style="color: #FFF9E7; font-size: 1vw; width: 95%; text-align: end; margin-top: 0;">
+                                LE LABO
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="card card-transi" id="card-red" style="transform: rotate(-10deg);">
+                    <div style="position: relative;"> 
+                        <p style="margin-top: 2vh; margin-left: 2vw; color: #FFF9E7;">
+                        POUR DES RÉSULTATS QUI DONNE LE SMILE
+                        </p>
+                        <svg style="width: 25.7vw; position:absolute; margin-left:-0.3vw; transform: rotate(3.9deg); top:3vh; z-index:1;" viewBox="0 0 527 206" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M135.848 175.754L148.336 155.724C167.543 124.914 214.649 134.177 220.761 169.966L242.582 189.965L163.926 195.327L135.848 175.754Z" fill="#FFF9E7"/>
+                        <path d="M280.487 164.224C285.92 121.061 344.458 111.933 362.774 151.392L366.024 158.392L367.61 181.661L282.073 187.492L280.487 164.224Z" fill="#FFF9E7"/>
+                        <path d="M439.061 153.413C444.494 110.251 503.032 101.122 521.348 140.581L524.598 147.582L526.184 170.851L440.647 176.682L439.061 153.413Z" fill="#FFF9E7"/>
+                        <path d="M359.226 158.851L359.594 156.336C365.367 116.877 411.936 98.7503 442.867 123.923L467.134 151.495L446.436 176.287L360.813 182.124L359.226 158.851Z" fill="#FFF9E7"/>
+                        <path d="M10.0492 182.461L12.6276 171.363C21.078 134.991 69.9145 128.169 88.0089 160.833L97.1709 199.878L11.6341 205.709L10.0492 182.461Z" fill="#FFF9E7"/>
+                        <path d="M204.817 169.328C219.918 143.495 254.1 136.484 278.152 154.288L290.573 163.482L292.163 186.804L206.407 192.65L204.817 169.328Z" fill="#FFF9E7"/>
+                        <path d="M73.5955 177.309L87.235 147.694C100.013 119.95 140.938 125.261 146.211 155.348L182.94 194.25L97.1834 200.096L73.5955 177.309Z" fill="#FFF9E7"/>
+                        </svg>
+                        <div style="background-color: #FFF9E7; position: absolute; z-index: 2; top:20vh;">
+                            <p style="color: #F61F1F; font-size: 0.6vw; width: 60%; margin-left: 1.5vw; letter-spacing: 0.05vw; line-height: 1.5vh;">
+                                À MOINS QUE CE NE SOIENT VOS CONCURRENTS QUI NOUS CONTACTENT EN PREMIER...
+                            </p>
+                            <p style="color: #F61F1F; font-size: 1vw; width: 95%; text-align: end; margin-top: 0;">
+                                LE LABO
+                            </p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>

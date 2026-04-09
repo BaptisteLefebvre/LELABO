@@ -94,7 +94,7 @@ gsap.from(selection[0].words, {
 })
 
 gsap.from(cards, {
-    yPercent: 200,
+    yPercent: 275,
     stagger : 0.5,
     scrollTrigger : {
         trigger : '.container2-sect2',
