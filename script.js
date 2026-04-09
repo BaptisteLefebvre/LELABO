@@ -20,11 +20,6 @@ const btn_q4 = document.getElementById("openrep4")
 const div_quest5 = document.getElementById("question5")
 const btn_q5 = document.getElementById("openrep5")
 
-const triggernuage = document.querySelector("#start-nuage")
-const nuage1 = document.querySelector(".nuage1")
-const nuage2 = document.querySelector(".nuage2")
-const nuage3 = document.querySelector(".nuage3")
-const nuage4 = document.querySelector(".nuage4")
 const sectcards = document.querySelector(".cards")
 let cards = document.querySelectorAll(".card-transi")
 
@@ -85,50 +80,6 @@ btn_nav_activ.addEventListener("click", () => {
     setTimeout(() => {
         navbar.classList.add("open")
     }, 300);
-})
-
-gsap.to(nuage1, {
-    xPercent : -100,
-    scrollTrigger : {
-        trigger : triggernuage,
-        toggleActions : "play none none none",
-        start : "top 30%",
-        end : "top",
-        scrub : 1
-    }
-})
-
-gsap.to(nuage2, {
-    xPercent : -200,
-    scrollTrigger : {
-        trigger : triggernuage,
-        toggleActions : "play none none none",
-        start : "top 30%",
-        end : "top",
-        scrub : 1,
-    }
-})
-
-gsap.to(nuage3, {
-    xPercent : 200,
-    scrollTrigger : {
-        trigger : triggernuage,
-        toggleActions : "play none none none",
-        start : "top 30%",
-        end : "top",
-        scrub : 1,
-    }
-})
-
-gsap.to(nuage4, {
-    xPercent : 100,
-    scrollTrigger : {
-        trigger : triggernuage,
-        toggleActions : "play none none none",
-        start : "top 30%",
-        end : "top",
-        scrub : 1
-    }
 })
 
 gsap.from(selection[0].words, {
