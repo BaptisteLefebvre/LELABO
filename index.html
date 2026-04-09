@@ -215,6 +215,7 @@
         box-shadow: 0.5vw 1vw 0.1vw  #18181949;
         position: absolute;
         overflow: hidden;
+        max-height: 18vw;
     }
 
     #card-blue1 {
@@ -443,10 +444,10 @@
 
     @keyframes scrolling {
         0% {
-        transform: translateX(0);
+        transform: translateX(-100%);
         }
         100% {
-        transform: translateX(-100%);
+        transform: translateX(0);
         }
     }
 
@@ -640,11 +641,11 @@
 
             <div class="cards">
                 <div class="card" id="card-blue1" style="transform: rotate(-5deg);">
-                    <div style="position: relative;"> 
+                    <div style="position: relative; height:100%;"> 
                         <p style="margin-top: 2vh; margin-left: 2vw; color: #A1C8FE;">
                         POUR DES RÉSULTATS QUI DONNE LE SMILE
                         </p>
-                        <svg style="width: 25.7vw; position:absolute; margin-left:-0.3vw; transform: rotate(3.9deg); top:3vh; z-index:1;" viewBox="0 0 527 206" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <svg style="width: 25.7vw; position:absolute; margin-left:-0.3vw; transform: rotate(3.9deg); top:3.5vh; z-index:1;" viewBox="0 0 527 206" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M135.848 175.754L148.336 155.724C167.543 124.914 214.649 134.177 220.761 169.966L242.582 189.965L163.926 195.327L135.848 175.754Z" fill="#A1C8FE"/>
                         <path d="M280.487 164.224C285.92 121.061 344.458 111.933 362.774 151.392L366.024 158.392L367.61 181.661L282.073 187.492L280.487 164.224Z" fill="#A1C8FE"/>
                         <path d="M439.061 153.413C444.494 110.251 503.032 101.122 521.348 140.581L524.598 147.582L526.184 170.851L440.647 176.682L439.061 153.413Z" fill="#A1C8FE"/>
@@ -657,7 +658,7 @@
                             <p style="color: #FFF9E7; font-size: 0.6vw; width: 60%; margin-left: 1.5vw; letter-spacing: 0.05vw; line-height: 1.5vh;">
                                 À MOINS QUE CE NE SOIENT VOS CONCURRENTS QUI NOUS CONTACTENT EN PREMIER...
                             </p>
-                            <p style="color: #FFF9E7; font-size: 1vw; width: 98%; text-align: end; margin-top: 0;">
+                            <p style="color: #FFF9E7; font-size: 1vw; width: 98%; text-align: end; margin: 0; padding-bottom: 1vh;">
                                 LE LABO
                             </p>
                         </div>
@@ -668,7 +669,7 @@
                         <p style="margin-top: 2vh; margin-left: 2vw; color: #FFF9E7;">
                         POUR DES RÉSULTATS QUI DONNE LE SMILE
                         </p>
-                        <svg style="width: 25.7vw; position:absolute; margin-left:-0.3vw; transform: rotate(3.9deg); top:3vh; z-index:1;" viewBox="0 0 527 206" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <svg style="width: 25.7vw; position:absolute; margin-left:-0.3vw; transform: rotate(3.9deg); top:3.5vh; z-index:1;" viewBox="0 0 527 206" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M135.848 175.754L148.336 155.724C167.543 124.914 214.649 134.177 220.761 169.966L242.582 189.965L163.926 195.327L135.848 175.754Z" fill="#FFF9E7"/>
                         <path d="M280.487 164.224C285.92 121.061 344.458 111.933 362.774 151.392L366.024 158.392L367.61 181.661L282.073 187.492L280.487 164.224Z" fill="#FFF9E7"/>
                         <path d="M439.061 153.413C444.494 110.251 503.032 101.122 521.348 140.581L524.598 147.582L526.184 170.851L440.647 176.682L439.061 153.413Z" fill="#FFF9E7"/>
@@ -692,7 +693,7 @@
                         <p style="margin-top: 2vh; margin-left: 2vw; color: #F61F1F;">
                         POUR DES RÉSULTATS QUI DONNE LE SMILE
                         </p>
-                        <svg style="width: 25.7vw; position:absolute; margin-left:-0.3vw; transform: rotate(3.9deg); top:3vh; z-index:1;" viewBox="0 0 527 206" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <svg style="width: 25.7vw; position:absolute; margin-left:-0.3vw; transform: rotate(3.9deg); top:3.5vh; z-index:1;" viewBox="0 0 527 206" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M135.848 175.754L148.336 155.724C167.543 124.914 214.649 134.177 220.761 169.966L242.582 189.965L163.926 195.327L135.848 175.754Z" fill="#181819"/>
                         <path d="M280.487 164.224C285.92 121.061 344.458 111.933 362.774 151.392L366.024 158.392L367.61 181.661L282.073 187.492L280.487 164.224Z" fill="#181819"/>
                         <path d="M439.061 153.413C444.494 110.251 503.032 101.122 521.348 140.581L524.598 147.582L526.184 170.851L440.647 176.682L439.061 153.413Z" fill="#181819"/>
@@ -716,7 +717,7 @@
                         <p style="margin-top: 2vh; margin-left: 2vw; color: #181819;">
                         POUR DES RÉSULTATS QUI DONNE LE SMILE
                         </p>
-                        <svg style="width: 25.7vw; position:absolute; margin-left:-0.3vw; transform: rotate(3.9deg); top:3vh; z-index:1;" viewBox="0 0 527 206" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <svg style="width: 25.7vw; position:absolute; margin-left:-0.3vw; transform: rotate(3.9deg); top:3.5vh; z-index:1;" viewBox="0 0 527 206" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M135.848 175.754L148.336 155.724C167.543 124.914 214.649 134.177 220.761 169.966L242.582 189.965L163.926 195.327L135.848 175.754Z" fill="#181819"/>
                         <path d="M280.487 164.224C285.92 121.061 344.458 111.933 362.774 151.392L366.024 158.392L367.61 181.661L282.073 187.492L280.487 164.224Z" fill="#181819"/>
                         <path d="M439.061 153.413C444.494 110.251 503.032 101.122 521.348 140.581L524.598 147.582L526.184 170.851L440.647 176.682L439.061 153.413Z" fill="#181819"/>
@@ -740,7 +741,7 @@
                         <p style="margin-top: 2vh; margin-left: 2vw; color: #FFF9E7;">
                         POUR DES RÉSULTATS QUI DONNE LE SMILE
                         </p>
-                        <svg style="width: 25.7vw; position:absolute; margin-left:-0.3vw; transform: rotate(3.9deg); top:3vh; z-index:1;" viewBox="0 0 527 206" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <svg style="width: 25.7vw; position:absolute; margin-left:-0.3vw; transform: rotate(3.9deg); top:3.5vh; z-index:1;" viewBox="0 0 527 206" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M135.848 175.754L148.336 155.724C167.543 124.914 214.649 134.177 220.761 169.966L242.582 189.965L163.926 195.327L135.848 175.754Z" fill="#FFF9E7"/>
                         <path d="M280.487 164.224C285.92 121.061 344.458 111.933 362.774 151.392L366.024 158.392L367.61 181.661L282.073 187.492L280.487 164.224Z" fill="#FFF9E7"/>
                         <path d="M439.061 153.413C444.494 110.251 503.032 101.122 521.348 140.581L524.598 147.582L526.184 170.851L440.647 176.682L439.061 153.413Z" fill="#FFF9E7"/>
