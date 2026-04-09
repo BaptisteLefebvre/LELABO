@@ -4,9 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://unpkg.com/splitting/dist/splitting.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
     <title>Le Labo</title>
 </head>
 <style>
+    @import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
+
     @font-face {
         font-family: DxKord;
         src: url(./FREE/DxKord-InktrapUltraExpanded.otf);
@@ -15,6 +20,11 @@
     @font-face {
         font-family: DxKordExp;
         src: url(./FREE/DxKord-InktrapExpanded.otf);
+    }
+
+    @font-face {
+        font-family: Anton;
+        src: url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
     }
 
     body {
@@ -265,12 +275,63 @@
 
     .secteur4 {
         width: 100vw;
-        height:120vh;
+        height:100vh;
         margin-top: -1vh;
         padding: 0;
         position: relative;
-        background-color: #181819;
+        background-color: #FFF9E7;
         z-index: 1;
+    }
+
+    .carousel-serv {
+        margin-left: 0;
+        margin-top: 7.5vh;
+        width: 100vw;
+        height: fit-content;
+        display: flex;
+        overflow-x:auto;
+        scroll-behavior: smooth;
+        anchor-name: --carouselserv;
+    }
+
+    .carousel-serv::-webkit-scrollbar {
+        display: none;
+    }
+
+    .carousel-serv::scroll-button(right), .carousel-serv::scroll-button(left) {
+        content: '>';
+        width: 2vw;
+        height: 2vw;
+        background-color: #FFF9E7;
+        border: solid 1px #F61F1F;
+        border-radius: 10vw;
+        font-size: 1vw;
+        text-align: center;
+        vertical-align: middle;
+        padding-bottom:  .1em;
+        position: fixed;
+        position-anchor: --carouselserv;
+        position-area: right bottom;
+        translate: -1300%;
+        z-index: 2;
+    }
+
+    .carousel-serv::scroll-button(left) {
+        content: '<';
+        position-area: left bottom;
+        translate: 1300%;
+    }
+
+    .cardserv {
+        flex: 0 0 18vw;
+        height: 30vh;
+        background-color: #F61F1F;
+        float: left;
+        margin-right: 2vw;
+        border-radius: 0.5vw;
+        box-shadow: 0.4vw 0.4vw 0.3vw  #18181949; 
+        position: relative;
+        margin-bottom: 2vh;
     }
 
     .secteur5 {
@@ -645,7 +706,7 @@
                         <p style="margin-top: 2vh; margin-left: 2vw; color: #A1C8FE;">
                         POUR DES RÉSULTATS QUI DONNE LE SMILE
                         </p>
-                        <svg style="width: 25.7vw; position:absolute; margin-left:-0.3vw; transform: rotate(3.9deg); top:3.5vh; z-index:1;" viewBox="0 0 527 206" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <svg style="width: 25.7vw; position:absolute; margin-left:-0.3vw; transform: rotate(3.9deg); top:3.75vh; z-index:1;" viewBox="0 0 527 206" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M135.848 175.754L148.336 155.724C167.543 124.914 214.649 134.177 220.761 169.966L242.582 189.965L163.926 195.327L135.848 175.754Z" fill="#A1C8FE"/>
                         <path d="M280.487 164.224C285.92 121.061 344.458 111.933 362.774 151.392L366.024 158.392L367.61 181.661L282.073 187.492L280.487 164.224Z" fill="#A1C8FE"/>
                         <path d="M439.061 153.413C444.494 110.251 503.032 101.122 521.348 140.581L524.598 147.582L526.184 170.851L440.647 176.682L439.061 153.413Z" fill="#A1C8FE"/>
@@ -669,7 +730,7 @@
                         <p style="margin-top: 2vh; margin-left: 2vw; color: #FFF9E7;">
                         POUR DES RÉSULTATS QUI DONNE LE SMILE
                         </p>
-                        <svg style="width: 25.7vw; position:absolute; margin-left:-0.3vw; transform: rotate(3.9deg); top:3.5vh; z-index:1;" viewBox="0 0 527 206" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <svg style="width: 25.7vw; position:absolute; margin-left:-0.3vw; transform: rotate(3.9deg); top:3.75vh; z-index:1;" viewBox="0 0 527 206" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M135.848 175.754L148.336 155.724C167.543 124.914 214.649 134.177 220.761 169.966L242.582 189.965L163.926 195.327L135.848 175.754Z" fill="#FFF9E7"/>
                         <path d="M280.487 164.224C285.92 121.061 344.458 111.933 362.774 151.392L366.024 158.392L367.61 181.661L282.073 187.492L280.487 164.224Z" fill="#FFF9E7"/>
                         <path d="M439.061 153.413C444.494 110.251 503.032 101.122 521.348 140.581L524.598 147.582L526.184 170.851L440.647 176.682L439.061 153.413Z" fill="#FFF9E7"/>
@@ -693,7 +754,7 @@
                         <p style="margin-top: 2vh; margin-left: 2vw; color: #F61F1F;">
                         POUR DES RÉSULTATS QUI DONNE LE SMILE
                         </p>
-                        <svg style="width: 25.7vw; position:absolute; margin-left:-0.3vw; transform: rotate(3.9deg); top:3.5vh; z-index:1;" viewBox="0 0 527 206" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <svg style="width: 25.7vw; position:absolute; margin-left:-0.3vw; transform: rotate(3.9deg); top:3.75vh; z-index:1;" viewBox="0 0 527 206" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M135.848 175.754L148.336 155.724C167.543 124.914 214.649 134.177 220.761 169.966L242.582 189.965L163.926 195.327L135.848 175.754Z" fill="#181819"/>
                         <path d="M280.487 164.224C285.92 121.061 344.458 111.933 362.774 151.392L366.024 158.392L367.61 181.661L282.073 187.492L280.487 164.224Z" fill="#181819"/>
                         <path d="M439.061 153.413C444.494 110.251 503.032 101.122 521.348 140.581L524.598 147.582L526.184 170.851L440.647 176.682L439.061 153.413Z" fill="#181819"/>
@@ -717,7 +778,7 @@
                         <p style="margin-top: 2vh; margin-left: 2vw; color: #181819;">
                         POUR DES RÉSULTATS QUI DONNE LE SMILE
                         </p>
-                        <svg style="width: 25.7vw; position:absolute; margin-left:-0.3vw; transform: rotate(3.9deg); top:3.5vh; z-index:1;" viewBox="0 0 527 206" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <svg style="width: 25.7vw; position:absolute; margin-left:-0.3vw; transform: rotate(3.9deg); top:3.75vh; z-index:1;" viewBox="0 0 527 206" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M135.848 175.754L148.336 155.724C167.543 124.914 214.649 134.177 220.761 169.966L242.582 189.965L163.926 195.327L135.848 175.754Z" fill="#181819"/>
                         <path d="M280.487 164.224C285.92 121.061 344.458 111.933 362.774 151.392L366.024 158.392L367.61 181.661L282.073 187.492L280.487 164.224Z" fill="#181819"/>
                         <path d="M439.061 153.413C444.494 110.251 503.032 101.122 521.348 140.581L524.598 147.582L526.184 170.851L440.647 176.682L439.061 153.413Z" fill="#181819"/>
@@ -741,7 +802,7 @@
                         <p style="margin-top: 2vh; margin-left: 2vw; color: #FFF9E7;">
                         POUR DES RÉSULTATS QUI DONNE LE SMILE
                         </p>
-                        <svg style="width: 25.7vw; position:absolute; margin-left:-0.3vw; transform: rotate(3.9deg); top:3.5vh; z-index:1;" viewBox="0 0 527 206" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <svg style="width: 25.7vw; position:absolute; margin-left:-0.3vw; transform: rotate(3.9deg); top:3.75vh; z-index:1;" viewBox="0 0 527 206" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M135.848 175.754L148.336 155.724C167.543 124.914 214.649 134.177 220.761 169.966L242.582 189.965L163.926 195.327L135.848 175.754Z" fill="#FFF9E7"/>
                         <path d="M280.487 164.224C285.92 121.061 344.458 111.933 362.774 151.392L366.024 158.392L367.61 181.661L282.073 187.492L280.487 164.224Z" fill="#FFF9E7"/>
                         <path d="M439.061 153.413C444.494 110.251 503.032 101.122 521.348 140.581L524.598 147.582L526.184 170.851L440.647 176.682L439.061 153.413Z" fill="#FFF9E7"/>
@@ -860,13 +921,13 @@
 
      <svg style=" width:100vw; left:0; margin-top:-40vh;" viewBox="0 0 2042 781" fill="none" xmlns="http://www.w3.org/2000/svg">
         <g filter="url(#filter0_d_53_1243)">
-        <path d="M506 682.233L568.632 595.296C665.278 461.145 876.516 517.735 893.156 682.233L986 780H627.374L506 682.233Z" fill="#181818"/>
-        <path d="M1166 674.632C1203.94 480.283 1472.67 456.997 1543.48 641.924L1556 674.632V781H1166V674.632Z" fill="#181818"/>
-        <path d="M1889 674.632C1926.94 480.283 2195.67 456.997 2266.48 641.924L2279 674.632V781H1889V674.632Z" fill="#181818"/>
-        <path d="M1525 674.614L1527.56 662.775C1565.88 485.438 1782.95 417.632 1915.4 541.631L2017 674.614L1915.4 781H1525V674.614Z" fill="#181818"/>
-        <path d="M-67 673.727L-51.8308 623.919C-2.32002 461.35 221.605 445.516 293.5 599.5L323 780H-67V673.727Z" fill="#181818"/>
-        <path d="M821 674.391C897.466 561.625 1054.98 540.362 1158.61 628.816L1212 674.391V781H821V674.391Z" fill="#181818"/>
-        <path d="M223 670L293.94 539.708C360.442 417.568 544.75 454.297 559.351 592.599L714 781H323L223 670Z" fill="#181818"/>
+        <path d="M506 682.233L568.632 595.296C665.278 461.145 876.516 517.735 893.156 682.233L986 780H627.374L506 682.233Z" fill="#FFF9E7"/>
+        <path d="M1166 674.632C1203.94 480.283 1472.67 456.997 1543.48 641.924L1556 674.632V781H1166V674.632Z" fill="#FFF9E7"/>
+        <path d="M1889 674.632C1926.94 480.283 2195.67 456.997 2266.48 641.924L2279 674.632V781H1889V674.632Z" fill="#FFF9E7"/>
+        <path d="M1525 674.614L1527.56 662.775C1565.88 485.438 1782.95 417.632 1915.4 541.631L2017 674.614L1915.4 781H1525V674.614Z" fill="#FFF9E7"/>
+        <path d="M-67 673.727L-51.8308 623.919C-2.32002 461.35 221.605 445.516 293.5 599.5L323 780H-67V673.727Z" fill="#FFF9E7"/>
+        <path d="M821 674.391C897.466 561.625 1054.98 540.362 1158.61 628.816L1212 674.391V781H821V674.391Z" fill="#FFF9E7"/>
+        <path d="M223 670L293.94 539.708C360.442 417.568 544.75 454.297 559.351 592.599L714 781H323L223 670Z" fill="#FFF9E7"/>
         </g>
         <defs>
         <filter id="filter0_d_53_1243" x="-77.5" y="408.132" width="2367" height="372.868" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
@@ -883,68 +944,135 @@
     </svg>
 
     <section class="secteur4">
-       <p style="position:absolute; font-family: DxKord; font-size: 5.5vw; letter-spacing: 0.15vw; margin-top:10vh; width: 40vw; margin-left: 5vw; color:#FFF9E7;">
-            SERVICES
-        </p>
-        <p style="position:absolute; font-family: Arial, Helvetica, sans-serif; font-size: 1vw; top:21vh; width: 40vw; margin-left: 5vw; color: rgb(251,251,251,0.7)">
-            Nos services sont pensés pour créer, structurer et déployer une <br>
-            communication cohérente, créative et performante, adaptée à chaque <span style="color: #FFF9E7;">projet.</span> <br>
-            Et à chaque client.
-        </p>
-        <div class="services">
-            <a href="" class="service" style="grid-column: 1;">Direction artistique</a>
-            <a href="" class="service" style="grid-column: 2;">Expérience web</a>
-            <a href="" class="service" style="grid-column: 3;">Stratégie de communication</a>
-            <a href="" class="service" style="grid-column: 4;">Conseils & Formations</a>
-        </div>
-            
-        <button class="btn-1" style="position: absolute; color: #181819; box-shadow: none; top: 45vh; left: 15vw;">ON EN DISCUTE ?</button>
-        
-        <div class="card-service">
-            <img src="./img/img-cardservice-1.png" alt="" style="width: 100%; height: 65%;">
-            <p style="margin-top: 2vh; font-family: DxKord; font-size: 1.5vw; width: 20vw; color:#FFF9E7; margin-bottom: 0;">
-                PRÉSENCE EN LIGNE SEO / SEA / ADS
-            </p>
-            <p style=" font-size: 1vw; width: 25vw; color: rgb(251,251,251,0.9);">
-                Visibilité durable avec le SEO. Résultats immédiats avec le SEA. Performance optimisée avec les Ads. Votre croissance devient mesurable.
-            </p>
-            <button class="btn-1" style="color: #181819; box-shadow: none; margin-top: 1vh;">ON EN DISCUTE ?</button>
-        </div>
-        
-        <div class="card-service card-service-transi">
-            <img src="./img/img-cardservice-2.png" alt="" style="width: 100%; height: 65%;">
-            <p style="margin-top: 2vh; font-family: DxKord; font-size: 1.5vw; width: 20vw; color:#FFF9E7; margin-bottom: 0;">
-                GROWTHHACKING & CONSULTING
-            </p>
-            <p style=" font-size: 1vw; width: 25vw; color: rgb(251,251,251,0.9);">
-                On pirate la croissance pour vous. Des idées qui claquent, des tests qui cartonnent, des résultats qui font sourire.
-            </p>
-            <button class="btn-1" style="color: #181819; box-shadow: none; margin-top: 1vh;">ON EN DISCUTE ?</button>
-        </div>
+        <div style="width: 100vw; padding-top: 5vh; margin-left: 15vw; height: 20vh;">
+            <div style="width: 45vw; float: left;">
+                <p style="font-family: DxKordExp; margin-top: 0; color: #FFF9E7; background-color: #F61F1F; font-size: 1vw; padding: 0.8vh 0.5vw 0.6vh 0.5vw; width: fit-content; letter-spacing: 0.05vw; border-radius: 0.4vw;">
+                    NOS SERVICES
+                </p>
 
-        <div class="card-service card-service-transi">
-            <div style="width: 100%; height: 65%; background-color: #F61F1F; display: flex; justify-content:center; ">
-                <img src="./img/img-cardservice-3.png" alt="" style="height: 135%; margin-top: -22.5%; margin-left: -15%;">
+                <h2 style="font-family: DxKord; color: #F61F1F; font-size: 2.5vw; font-weight: 400; margin-top: 1vh; margin-bottom: 1vh; width: 40vw;">
+                    CE QU'ON FAIT DE MIEUX POUR VOUS
+                </h2>
+
+                <p style="font-family: DxKordExp; color: #181819; font-size: 1vw; font-weight: 400; margin-top: 1vh; width: 40vw; letter-spacing: 0.05vw;">
+                    YOU BECOME FINANCIALLY RESILIENT
+                </p>
             </div>
-            <p style="margin-top: 2vh; font-family: DxKord; font-size: 1.5vw; width: 20vw; color:#FFF9E7; margin-bottom: 0;">
-                GROWTHHACKING & CONSULTING
-            </p>
-            <p style=" font-size: 1vw; width: 25vw; color: rgb(251,251,251,0.9);">
-                On pirate la croissance pour vous. Des idées qui claquent, des tests qui cartonnent, des résultats qui font sourire.
-            </p>
-            <button class="btn-1" style="color: #181819; box-shadow: none; margin-top: 1vh;">ON EN DISCUTE ?</button>
+
+            <div style="width: 22vw; float: left; padding-top: 10vh;">
+                <p style="font-size: 0.8vw; text-align: justify; font-weight: 500;">
+                    Onboarding. Quarterly Reports. Annual Accounts & Corporation Tax. VAT. Payroll & Pensions. Self Assessment. The3Key knows what the Tax Man wants and plans for every move he may make.
+                </p>
+            </div>
+            
         </div>
+       
+       <div class="carousel-serv">
+            <div class="cardserv" style="margin-left: 15vw;">
+                <p style="position: absolute; top:0; right: 1vw; background-color: #FFF9E7; color: #F61F1F; font-family: DxKord; font-size: 0.65vw; padding: 0.5vh 0.5vw 0.3vh 0.5vw; border-radius: 0.25vw; letter-spacing: 0.05vw;">
+                    POUR ÊTRE VISIBLE
+                </p>
+
+                <div style="height:16vh; position: absolute; bottom: 0; margin-left: 1.5vw;">
+                    <h3 style="font-family: Anton; font-size: 1.2vw; color: #FFF9E7; letter-spacing: 0.05vw; font-weight: 100; width: 60%; margin-top: 0; margin-bottom: 0; line-height: 2.75vh;">
+                        PRÉSENCE EN LIGNE SEO/SEA/ADS
+                    </h3>
+
+                    <p style="font-family:sans-serif; color: #FFF9E7; font-size: 0.8vw;">
+                        We do the heavy lifting, then it's over to
+                        teaching you what's crucial. It all saves you
+                        time and money.
+                    </p>
+                </div>
+
+            </div>
+            <div class="cardserv">
+                <p style="position: absolute; top:0; right: 1vw; background-color: #FFF9E7; color: #F61F1F; font-family: DxKord; font-size: 0.65vw; padding: 0.5vh 0.5vw 0.3vh 0.5vw; border-radius: 0.25vw; letter-spacing: 0.05vw;">
+                    POUR CONVERTIR PLUS
+                </p>
+
+                <div style="height:16vh; position: absolute; bottom: 0; margin-left: 1.5vw;">
+                    <h3 style="font-family: Anton; font-size: 1.2vw; color: #FFF9E7; letter-spacing: 0.05vw; font-weight: 100; width: 60%; margin-top: 0; margin-bottom: 0; line-height: 2.75vh;">
+                        GROWTHACKING & CONSULTING
+                    </h3>
+
+                    <p style="font-family:sans-serif; color: #FFF9E7; font-size: 0.8vw;">
+                        We do the heavy lifting, then it's over to
+                        teaching you what's crucial. It all saves you
+                        time and money.
+                    </p>
+                </div>
+            </div>
+            <div class="cardserv">
+                <p style="position: absolute; top:0; right: 1vw; background-color: #FFF9E7; color: #F61F1F; font-family: DxKord; font-size: 0.65vw; padding: 0.5vh 0.5vw 0.3vh 0.5vw; border-radius: 0.25vw; letter-spacing: 0.05vw;">
+                    POUR ÊTRE PRÉSENT
+                </p>
+
+                <div style="height:16vh; position: absolute; bottom: 0; margin-left: 1.5vw;">
+                    <h3 style="font-family: Anton; font-size: 1.2vw; color: #FFF9E7; letter-spacing: 0.05vw; font-weight: 100; width: 60%; margin-top: 0; margin-bottom: 0; line-height: 2.75vh;">
+                        CRÉATION DE VOTRE SITE WEB
+                    </h3>
+
+                    <p style="font-family:sans-serif; color: #FFF9E7; font-size: 0.8vw;">
+                        We do the heavy lifting, then it's over to
+                        teaching you what's crucial. It all saves you
+                        time and money.
+                    </p>
+                </div>
+            </div>
+            <div class="cardserv">
+                <p style="position: absolute; top:0; right: 1vw; background-color: #FFF9E7; color: #F61F1F; font-family: DxKord; font-size: 0.65vw; padding: 0.5vh 0.5vw 0.3vh 0.5vw; border-radius: 0.25vw; letter-spacing: 0.05vw;">
+                    POUR ÊTRE BEAU
+                </p>
+
+                <div style="height:16vh; position: absolute; bottom: 0; margin-left: 1.5vw;">
+                    <h3 style="font-family: Anton; font-size: 1.2vw; color: #FFF9E7; letter-spacing: 0.05vw; font-weight: 100; width: 60%; margin-top: 0; margin-bottom: 0; line-height: 2.75vh;">
+                        REFONTE DE VOTRE SITE WEB
+                    </h3>
+
+                    <p style="font-family:sans-serif; color: #FFF9E7; font-size: 0.8vw;">
+                        We do the heavy lifting, then it's over to
+                        teaching you what's crucial. It all saves you
+                        time and money.
+                    </p>
+                </div>
+            </div>
+            <div class="cardserv">
+                <p style="position: absolute; top:0; right: 1vw; background-color: #FFF9E7; color: #F61F1F; font-family: DxKord; font-size: 0.65vw; padding: 0.5vh 0.5vw 0.3vh 0.5vw; border-radius: 0.25vw; letter-spacing: 0.05vw;">
+                    POUR AVOIR UNE COMMUNAUTÉ
+                </p>
+
+                <div style="height:16vh; position: absolute; bottom: 0; margin-left: 1.5vw;">
+                    <h3 style="font-family: Anton; font-size: 1.2vw; color: #FFF9E7; letter-spacing: 0.05vw; font-weight: 100; width: 60%; margin-top: 0; margin-bottom: 0; line-height: 2.75vh;">
+                        COMMUNITY MANAGEMENT
+                    </h3>
+
+                    <p style="font-family:sans-serif; color: #FFF9E7; font-size: 0.8vw;">
+                        We do the heavy lifting, then it's over to
+                        teaching you what's crucial. It all saves you
+                        time and money.
+                    </p>
+                </div>
+            </div>
+       </div>
+            
+        <button class="btn-2">
+            ON EN DISCUTE ?
+        </button>
+        
+        <img src="./img/bonhomme-help.png" alt="" style="position: absolute; bottom: -5vh; left: -7.5vw; transform: rotate(30deg); width: 30vw;">
+
     </section>
 
     <svg style="width:100vw; margin-top:-1vh;" viewBox="0 0 2042 781" fill="none" xmlns="http://www.w3.org/2000/svg">
         <g filter="url(#filter0_d_53_1113)">
-        <path d="M488 98.7668L550.632 185.704C647.278 319.855 858.516 263.265 875.156 98.7668L968 1H609.374L488 98.7668Z" fill="#181818"/>
-        <path d="M1148 106.368C1185.94 300.717 1454.67 324.003 1525.48 139.076L1538 106.368V0H1148V106.368Z" fill="#181818"/>
-        <path d="M1871 106.368C1908.94 300.717 2177.67 324.003 2248.48 139.076L2261 106.368V0H1871V106.368Z" fill="#181818"/>
-        <path d="M1507 106.386L1509.56 118.225C1547.88 295.562 1764.95 363.368 1897.4 239.369L1999 106.386L1897.4 0H1507V106.386Z" fill="#181818"/>
-        <path d="M-85 107.273L-69.8308 157.081C-20.32 319.65 203.605 335.484 275.5 181.5L305 1H-85V107.273Z" fill="#181818"/>
-        <path d="M803 106.609C879.466 219.375 1036.98 240.638 1140.61 152.184L1194 106.609V0H803V106.609Z" fill="#181818"/>
-        <path d="M205 111L275.94 241.292C342.442 363.432 526.75 326.703 541.351 188.401L696 0H305L205 111Z" fill="#181818"/>
+        <path d="M488 98.7668L550.632 185.704C647.278 319.855 858.516 263.265 875.156 98.7668L968 1H609.374L488 98.7668Z" fill="#FFF9E7"/>
+        <path d="M1148 106.368C1185.94 300.717 1454.67 324.003 1525.48 139.076L1538 106.368V0H1148V106.368Z" fill="#FFF9E7"/>
+        <path d="M1871 106.368C1908.94 300.717 2177.67 324.003 2248.48 139.076L2261 106.368V0H1871V106.368Z" fill="#FFF9E7"/>
+        <path d="M1507 106.386L1509.56 118.225C1547.88 295.562 1764.95 363.368 1897.4 239.369L1999 106.386L1897.4 0H1507V106.386Z" fill="#FFF9E7"/>
+        <path d="M-85 107.273L-69.8308 157.081C-20.32 319.65 203.605 335.484 275.5 181.5L305 1H-85V107.273Z" fill="#FFF9E7"/>
+        <path d="M803 106.609C879.466 219.375 1036.98 240.638 1140.61 152.184L1194 106.609V0H803V106.609Z" fill="#FFF9E7"/>
+        <path d="M205 111L275.94 241.292C342.442 363.432 526.75 326.703 541.351 188.401L696 0H305L205 111Z" fill="#FFF9E7"/>
         </g>
         <defs>
         <filter id="filter0_d_53_1113" x="-95.5" y="0" width="2367" height="372.868" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">

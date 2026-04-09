@@ -23,9 +23,6 @@ const btn_q5 = document.getElementById("openrep5")
 const sectcards = document.querySelector(".cards")
 let cards = document.querySelectorAll(".card-transi")
 
-const sectservices = document.querySelector(".secteur4")
-let cardservices = document.querySelectorAll(".card-service-transi")
-
 const sectmethod = document.querySelector(".secteur5")
 let cardmethods = document.querySelectorAll(".cardmethod-transi")
 
@@ -113,18 +110,6 @@ gsap.from(selection2[0].words, {
         scrub: true,
         start: "top 85%",
         end : "top 15%"
-    }
-})
-
-gsap.from(cardservices, {
-    yPercent: 150,
-    stagger : 0.5,
-    scrollTrigger : {
-        trigger : '.secteur4',
-        start: "top top",
-        end: "+=3000",
-        scrub : true,
-        pin: true,
     }
 })
 
