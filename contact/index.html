@@ -23,8 +23,8 @@
 
     body {
         background-color: #F61F1F;
-        font-family: DxKord;
         overflow-x : hidden;
+        font-family: Arial, Helvetica, sans-serif;
         margin: 0;
     }
 
@@ -144,6 +144,63 @@
         height: 30vh;
     }
 
+     footer {
+        width: 95vw;
+        margin: 0 2.5vw 2.5vw 2.5vw;
+        height:70vh;
+        padding: 0;
+        position: relative;
+        background-color: #FFF9E7;
+        border-radius: 0.5vw;
+        overflow: hidden;
+    }
+
+    label {
+        font-family: DxKordExp; 
+        color: #FFF9E7;
+        letter-spacing: 0.05vw;
+        font-size:  1.4vw;
+    }
+
+    input, textarea {
+        background-color: #FFF9E7;
+        border: none;
+        border-radius: 0.3vw;
+        padding: 0.5vh 0.5vw;
+        font-family: Arial, Helvetica, sans-serif;
+        color: #181819;
+        font-size: 0.8vw;
+    }
+
+    textarea {
+        padding: 1vh 1vw;
+        width: 36.5vw; 
+        height: 21vh; 
+        max-width: 36.5vw; 
+        max-height: 21vh;
+        min-width: 36.5vw;
+        min-height: 21vh;
+    }
+
+    input:focus, textarea:focus {
+        outline: solid #181819 2px;
+    }
+
+    .btn-1 {
+        padding: 0.75vw 1.5vw;
+        border-radius: 50px;
+        border:none;
+        color:#F61F1F;
+        background-color: #FFF9E7;
+        cursor: pointer;
+        box-shadow: 5px 7px #8a0e10;
+        font-family: DxKord;
+        font-size: 1.25vw;
+        margin: auto;
+    }
+
+    
+
 </style>
 <body>
     <div class="activ_nav">
@@ -196,11 +253,328 @@
         </div>
     </div>
 
-    <section style="display: flex;align-items: center; justify-content: center; width: 100vw; height: 100vh;">
-        <h1 style="width: 70vw; font-size: 8vw; text-align: center; color: #fff9e7; letter-spacing: 0.2vw; font-weight: 200;">
-            LA PAGE EST EN COURS DE CONSTRUCTION
-        </h1>
+    <section style="width: 85vw; height: 85vh; padding: 7.5vh 7.5vw 7.5vh 7.5vw; margin: 0 0 10vh 0;">
+        <div style="width: 37.5vw; height: 85vh; float: left;">
+            <p style="margin-top: 0; font-family: DxKordExp; color: #F61F1F; background-color: #FFF9E7; letter-spacing: 0.025vw; padding: 0.75vw 0.5vw 0.5vw 0.5vw; font-size: 1.1vw; width: fit-content; border-radius: 0.5vw;">NOS SERVICES</p>
+
+            <p style="font-family: DxKord; color: #FFF9E7; font-size: 2.5vw; margin: 3vh 0 2vh 0;">CE QU'ON FAIT DE MIEUX POUR VOUS</p>
+
+            <p style="font-family: DxKordExp; letter-spacing: 0.035vw; color: #181819; font-size: 0.9vw; margin: 0 0 5vh 0; ">YOU BECOME FINANCIALLY RESILIENT</p>
+
+            <form action="" style="width: 37.5vw;">
+                <div style="width: 37.5vw; height: 12vh;">
+                    <div style="width: 16.5vw; float: left;">
+                        <label style="width: 16.5vw;" for="name">NOM PRÉNOM</label>
+                        <input style="width: 16.5vw; height: 5vh;" type="text" id="name" name="name" maxlength="50" placeholder="DUPONT Jean" required>
+                    </div>
+                    <div style="width: 16.5vw; float: right;">
+                        <label style="width: 16.5vw;" for="email">ADRESSE E-MAIL</label>
+                        <input style="width: 16.5vw; height: 5vh;" type="email" id="email" name="email" maxlength="50" placeholder="Jean@gmail.com" required>
+                    </div>
+                </div>
+
+                <div style="width: 37.5vw; height: 12vh;">
+                    <div style="width: 16.5vw; float: left;">
+                        <label style="width: 16.5vw;" for="entreprise">NOM DE L'ENTREPRISE</label>
+                        <input style="width: 16.5vw; height: 5vh;" type="text" id="entreprise" name="entreprise" maxlength="50" placeholder="LE LABO" required>
+                    </div>
+                    <div style="width: 16.5vw; float: right;">
+                        <label style="width: 16.5vw;" for="tel">TÉLÉPHONE</label>
+                        <input style="width: 16.5vw; height: 5vh;" type="tel" id="tel" name="tel" maxlength="50" placeholder="01 23 45 67 89" required>    
+                    </div>
+                </div>
+
+                <div style="width: 37.5vw; height: fit-content;">
+                    <div style="width: 37.5vw; height: fit-content;">
+                        <label style="width: 37.5vw;" for="msg">MESSAGE</label>
+                    </div>
+                    <textarea name="msg" id="msg" placeholder="Ecrivez tout vos souhait ici..."></textarea>
+                </div>
+                
+                
+                <p style="text-align: center;">
+                    <input type="submit" value="ENVOYER" class="btn-1">
+                </p>
+                
+                
+            </form>
+
+        </div>
+
+        <div style="width: 33.5vw; height: 79vh; background-color: #FFF9E7; float: right; padding: 3vh 2vw; position: relative;">
+            <p style="font-family: DxKord; color: #F61F1F; text-align: center; font-size: 3.5vw; margin: 0;">LE LABO</p>
+
+            <svg style="width: 33.5vw;" viewBox="0 0 705 4" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect width="34" height="4" fill="#F61F1F"/>
+            <rect x="39" width="65" height="4" fill="#F61F1F"/>
+            <rect x="109" width="65" height="4" fill="#F61F1F"/>
+            <rect x="179" width="65" height="4" fill="#F61F1F"/>
+            <rect x="249" width="65" height="4" fill="#F61F1F"/>
+            <rect x="319" width="65" height="4" fill="#F61F1F"/>
+            <rect x="389" width="65" height="4" fill="#F61F1F"/>
+            <rect x="459" width="65" height="4" fill="#F61F1F"/>
+            <rect x="529" width="65" height="4" fill="#F61F1F"/>
+            <rect x="599" width="65" height="4" fill="#F61F1F"/>
+            <rect x="669" width="36" height="4" fill="#F61F1F"/>
+            </svg>
+
+            <p style="font-family: DxKord; color: #F61F1F; text-align: center; font-size: 1.75vw; width: 21.75vw; margin: 6vh 0 0 5.875vw;">
+                POUR DES SERVICES FRAIS ET FAIT MAISON
+            </p>
+
+            <p style="color: #F61F1F; text-align: center; font-size: 0.85vw; width: 21.75vw; margin: 1vh 0 0 5.875vw;">
+                Chez Le Labo, nous nous efforçons de produire des services de qualité avec un impact mesurable.
+            </p>
+
+            <div style="width: 31.5vw; color: #F61F1F; margin: 9vh 1vw 4vh 1vw; font-size: 0.9vw;">
+                <div style="width: 100%; height: 3vh;">
+                    <p style="width: fit-content; float: left; margin: 0;">#SEO</p> <p style="width: fit-content; float: right; margin: 0;">Merci €</p>
+                </div>
+                <div style="width: 100%; height: 3vh;">
+                    <p style="width: fit-content; float: left; margin: 0;">#Refonte</p> <p style="width: fit-content; float: right; margin: 0;">Pour €</p>
+                </div>
+                <div style="width: 100%; height: 3vh;">
+                    <p style="width: fit-content; float: left; margin: 0;">#Ads</p> <p style="width: fit-content; float: right; margin: 0;">Votre €</p>
+                </div>
+                <div style="width: 100%; height: 3vh;">
+                    <p style="width: fit-content; float: left; margin: 0;">#Community Management</p> <p style="width: fit-content; float: right; margin: 0;">Confiance €</p>
+                </div>
+                <div style="width: 100%; height: 3vh;">
+                    <p style="width: fit-content; float: left; margin: 0;">#Automatisation</p> <p style="width: fit-content; float: right; margin: 0;">LE LABO €</p>
+                </div>
+            </div>
+
+            <svg style="width: 33.5vw;" viewBox="0 0 705 4" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect width="34" height="4" fill="#F61F1F"/>
+            <rect x="39" width="65" height="4" fill="#F61F1F"/>
+            <rect x="109" width="65" height="4" fill="#F61F1F"/>
+            <rect x="179" width="65" height="4" fill="#F61F1F"/>
+            <rect x="249" width="65" height="4" fill="#F61F1F"/>
+            <rect x="319" width="65" height="4" fill="#F61F1F"/>
+            <rect x="389" width="65" height="4" fill="#F61F1F"/>
+            <rect x="459" width="65" height="4" fill="#F61F1F"/>
+            <rect x="529" width="65" height="4" fill="#F61F1F"/>
+            <rect x="599" width="65" height="4" fill="#F61F1F"/>
+            <rect x="669" width="36" height="4" fill="#F61F1F"/>
+            </svg>
+
+            <div style="width: 31.5vw; color: #F61F1F; margin: 1vh 1vw 0 1vw; height: fit-content; font-size: 0.9vw;">
+                <p style="font-family: DxKord; font-size: 1.75vw; width: fit-content; margin: 0; float: left; height:3.5vh;">MERCI</p> 
+                <div style="width: fit-content; height: 3.5vh; float: right; display: flex; align-items: center;">
+                    <p style="width: fit-content; float: right; margin: 0 1vw 0 0; ">Total :</p>
+                    <p style="width: fit-content; float: right; margin: 0;">Satisfaction client €</p>
+                    
+                </div>
+            </div>
+
+            <svg style="width: 33.5vw;" viewBox="0 0 705 4" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect width="34" height="4" fill="#F61F1F"/>
+            <rect x="39" width="65" height="4" fill="#F61F1F"/>
+            <rect x="109" width="65" height="4" fill="#F61F1F"/>
+            <rect x="179" width="65" height="4" fill="#F61F1F"/>
+            <rect x="249" width="65" height="4" fill="#F61F1F"/>
+            <rect x="319" width="65" height="4" fill="#F61F1F"/>
+            <rect x="389" width="65" height="4" fill="#F61F1F"/>
+            <rect x="459" width="65" height="4" fill="#F61F1F"/>
+            <rect x="529" width="65" height="4" fill="#F61F1F"/>
+            <rect x="599" width="65" height="4" fill="#F61F1F"/>
+            <rect x="669" width="36" height="4" fill="#F61F1F"/>
+            </svg>
+
+            <svg style="width: 16.75vw; margin: 4vh 0 0 8.375vw;" viewBox="0 0 398 85" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <g clip-path="url(#clip0_345_702)">
+            <rect width="397.989" height="84.5545" fill="#FFF9E7"/>
+            <path d="M2.23313 0H0.046875V84.5545H2.23313V0Z" fill="#F61F1F"/>
+            <path d="M29.9245 0H27.7383V84.5545H29.9245V0Z" fill="#F61F1F"/>
+            <path d="M57.6159 0H55.4297V84.5545H57.6159V0Z" fill="#F61F1F"/>
+            <path d="M85.3113 0H83.125V84.5545H85.3113V0Z" fill="#F61F1F"/>
+            <path d="M113.003 0H110.816V84.5545H113.003V0Z" fill="#F61F1F"/>
+            <path d="M140.694 0H138.508V84.5545H140.694V0Z" fill="#F61F1F"/>
+            <path d="M168.385 0H166.199V84.5545H168.385V0Z" fill="#F61F1F"/>
+            <path d="M196.081 0H193.895V84.5545H196.081V0Z" fill="#F61F1F"/>
+            <path d="M223.772 0H221.586V84.5545H223.772V0Z" fill="#F61F1F"/>
+            <path d="M251.464 0H249.277V84.5545H251.464V0Z" fill="#F61F1F"/>
+            <path d="M279.159 0H276.973V84.5545H279.159V0Z" fill="#F61F1F"/>
+            <path d="M306.85 0H304.664V84.5545H306.85V0Z" fill="#F61F1F"/>
+            <path d="M334.542 0H332.355V84.5545H334.542V0Z" fill="#F61F1F"/>
+            <path d="M9.52095 0H5.14844V84.5545H9.52095V0Z" fill="#F61F1F"/>
+            <path d="M37.2124 0H32.8398V84.5545H37.2124V0Z" fill="#F61F1F"/>
+            <path d="M64.9038 0H60.5312V84.5545H64.9038V0Z" fill="#F61F1F"/>
+            <path d="M92.5952 0H88.2227V84.5545H92.5952V0Z" fill="#F61F1F"/>
+            <path d="M120.29 0H115.918V84.5545H120.29V0Z" fill="#F61F1F"/>
+            <path d="M147.982 0H143.609V84.5545H147.982V0Z" fill="#F61F1F"/>
+            <path d="M175.673 0H171.301V84.5545H175.673V0Z" fill="#F61F1F"/>
+            <path d="M203.369 0H198.996V84.5545H203.369V0Z" fill="#F61F1F"/>
+            <path d="M231.06 0H226.688V84.5545H231.06V0Z" fill="#F61F1F"/>
+            <path d="M258.751 0H254.379V84.5545H258.751V0Z" fill="#F61F1F"/>
+            <path d="M286.447 0H282.074V84.5545H286.447V0Z" fill="#F61F1F"/>
+            <path d="M314.138 0H309.766V84.5545H314.138V0Z" fill="#F61F1F"/>
+            <path d="M341.83 0H337.457V84.5545H341.83V0Z" fill="#F61F1F"/>
+            <path d="M13.1628 0H10.9766V84.5545H13.1628V0Z" fill="#F61F1F"/>
+            <path d="M40.8542 0H38.668V84.5545H40.8542V0Z" fill="#F61F1F"/>
+            <path d="M68.5495 0H66.3633V84.5545H68.5495V0Z" fill="#F61F1F"/>
+            <path d="M96.2409 0H94.0547V84.5545H96.2409V0Z" fill="#F61F1F"/>
+            <path d="M123.932 0H121.746V84.5545H123.932V0Z" fill="#F61F1F"/>
+            <path d="M151.628 0H149.441V84.5545H151.628V0Z" fill="#F61F1F"/>
+            <path d="M179.319 0H177.133V84.5545H179.319V0Z" fill="#F61F1F"/>
+            <path d="M207.01 0H204.824V84.5545H207.01V0Z" fill="#F61F1F"/>
+            <path d="M234.702 0H232.516V84.5545H234.702V0Z" fill="#F61F1F"/>
+            <path d="M262.397 0H260.211V84.5545H262.397V0Z" fill="#F61F1F"/>
+            <path d="M290.089 0H287.902V84.5545H290.089V0Z" fill="#F61F1F"/>
+            <path d="M317.78 0H315.594V84.5545H317.78V0Z" fill="#F61F1F"/>
+            <path d="M345.475 0H343.289V84.5545H345.475V0Z" fill="#F61F1F"/>
+            <path d="M17.5339 0H15.3477V84.5545H17.5339V0Z" fill="#F61F1F"/>
+            <path d="M45.2292 0H43.043V84.5545H45.2292V0Z" fill="#F61F1F"/>
+            <path d="M72.9206 0H70.7344V84.5545H72.9206V0Z" fill="#F61F1F"/>
+            <path d="M100.612 0H98.4258V84.5545H100.612V0Z" fill="#F61F1F"/>
+            <path d="M128.307 0H126.121V84.5545H128.307V0Z" fill="#F61F1F"/>
+            <path d="M155.999 0H153.812V84.5545H155.999V0Z" fill="#F61F1F"/>
+            <path d="M183.69 0H181.504V84.5545H183.69V0Z" fill="#F61F1F"/>
+            <path d="M211.382 0H209.195V84.5545H211.382V0Z" fill="#F61F1F"/>
+            <path d="M239.077 0H236.891V84.5545H239.077V0Z" fill="#F61F1F"/>
+            <path d="M266.768 0H264.582V84.5545H266.768V0Z" fill="#F61F1F"/>
+            <path d="M294.46 0H292.273V84.5545H294.46V0Z" fill="#F61F1F"/>
+            <path d="M322.155 0H319.969V84.5545H322.155V0Z" fill="#F61F1F"/>
+            <path d="M349.846 0H347.66V84.5545H349.846V0Z" fill="#F61F1F"/>
+            <path d="M26.2797 0H18.9922V84.5545H26.2797V0Z" fill="#F61F1F"/>
+            <path d="M53.975 0H46.6875V84.5545H53.975V0Z" fill="#F61F1F"/>
+            <path d="M81.6664 0H74.3789V84.5545H81.6664V0Z" fill="#F61F1F"/>
+            <path d="M109.358 0H102.07V84.5545H109.358V0Z" fill="#F61F1F"/>
+            <path d="M137.049 0H129.762V84.5545H137.049V0Z" fill="#F61F1F"/>
+            <path d="M164.745 0H157.457V84.5545H164.745V0Z" fill="#F61F1F"/>
+            <path d="M192.436 0H185.148V84.5545H192.436V0Z" fill="#F61F1F"/>
+            <path d="M220.127 0H212.84V84.5545H220.127V0Z" fill="#F61F1F"/>
+            <path d="M247.823 0H240.535V84.5545H247.823V0Z" fill="#F61F1F"/>
+            <path d="M275.514 0H268.227V84.5545H275.514V0Z" fill="#F61F1F"/>
+            <path d="M303.205 0H295.918V84.5545H303.205V0Z" fill="#F61F1F"/>
+            <path d="M330.897 0H323.609V84.5545H330.897V0Z" fill="#F61F1F"/>
+            <path d="M358.592 0H351.305V84.5545H358.592V0Z" fill="#F61F1F"/>
+            <path d="M334.542 0H332.355V84.5545H334.542V0Z" fill="#F61F1F"/>
+            <path d="M341.83 0H337.457V84.5545H341.83V0Z" fill="#F61F1F"/>
+            <path d="M345.475 0H343.289V84.5545H345.475V0Z" fill="#F61F1F"/>
+            <path d="M349.846 0H347.66V84.5545H349.846V0Z" fill="#F61F1F"/>
+            <path d="M330.897 0H323.609V84.5545H330.897V0Z" fill="#F61F1F"/>
+            <path d="M358.592 0H351.305V84.5545H358.592V0Z" fill="#F61F1F"/>
+            <path d="M373.893 0H371.707V84.5545H373.893V0Z" fill="#F61F1F"/>
+            <path d="M381.181 0H376.809V84.5545H381.181V0Z" fill="#F61F1F"/>
+            <path d="M384.827 0H382.641V84.5545H384.827V0Z" fill="#F61F1F"/>
+            <path d="M389.198 0H387.012V84.5545H389.198V0Z" fill="#F61F1F"/>
+            <path d="M370.252 0H362.965V84.5545H370.252V0Z" fill="#F61F1F"/>
+            <path d="M397.944 0H390.656V84.5545H397.944V0Z" fill="#F61F1F"/>
+            </g>
+            <defs>
+            <clipPath id="clip0_345_702">
+            <rect width="397.989" height="84.5545" fill="white"/>
+            </clipPath>
+            </defs>
+            </svg>
+
+
+            <svg style="width: 33.5vw; position:absolute; bottom:0; left:2vw;" viewBox="0 0 877 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect width="30" height="30" fill="#F61F1F"/>
+            <rect x="77" width="30" height="30" fill="#F61F1F"/>
+            <rect x="154" width="30" height="30" fill="#F61F1F"/>
+            <rect x="231" width="30" height="30" fill="#F61F1F"/>
+            <rect x="308" width="30" height="30" fill="#F61F1F"/>
+            <rect x="385" width="30" height="30" fill="#F61F1F"/>
+            <rect x="462" width="30" height="30" fill="#F61F1F"/>
+            <rect x="539" width="30" height="30" fill="#F61F1F"/>
+            <rect x="616" width="30" height="30" fill="#F61F1F"/>
+            <rect x="693" width="30" height="30" fill="#F61F1F"/>
+            <rect x="770" width="30" height="30" fill="#F61F1F"/>
+            <rect x="847" width="30" height="30" fill="#F61F1F"/>
+            </svg>
+
+        </div>
+        
     </section>
+
+    <footer>
+        <div style="position: absolute; height: auto; width: 15vw; top: 2vw; left: 3vw;">
+            <p style="width: fit-content; margin:0.5vw 0;">Programs</p>
+            <p style="width: fit-content; margin:0.5vw 0;">Careers</p>
+            <p style="width: fit-content; margin:0.5vw 0;">Shop</p>
+            <p style="width: fit-content; margin:0.5vw 0;">Service Areas</p>
+        </div>
+        <div style="position: absolute; height: auto; width: 15vw; top: 2vw; left: 18vw;">
+            <p style="width: fit-content; margin:0.5vw 0;">Our Story</p>
+            <p style="width: fit-content; margin:0.5vw 0;">FAQ</p>
+            <p style="width: fit-content; margin:0.5vw 0;">Contact</p>
+            <p style="width: fit-content; margin:0.5vw 0;">Donate</p>
+        </div>
+        <div style="position: absolute; height: auto; width: fit-content; top: 4vw; right: 3vw;">
+            <a href="" style="width: fit-content; float: left;">
+                <div style="height: 3.5vw; width: 3.5vw; border-radius: 100%; background-color: #FFCCCD; display: flex; justify-content: center; align-items: center;">
+                    <svg style="width: 1.25vw; margin:auto;" viewBox="0 0 28 27" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <g clip-path="url(#clip0_345_379)">
+                    <path d="M2.17291 5.18263C1.55132 4.60549 1.24219 3.8911 1.24219 3.04112C1.24219 2.19113 1.55297 1.44532 2.17291 0.866526C2.79451 0.289392 3.59466 0 4.57501 0C5.55535 0 6.3241 0.289392 6.94405 0.866526C7.56564 1.44366 7.87477 2.16963 7.87477 3.04112C7.87477 3.9126 7.564 4.60549 6.94405 5.18263C6.32244 5.75976 5.53385 6.04915 4.57501 6.04915C3.61615 6.04915 2.79451 5.75976 2.17291 5.18263ZM7.35238 8.49329V26.1877H1.76293V8.49329H7.35238Z" fill="#2668FD"/>
+                    <path d="M25.9567 10.2412C27.1751 11.5642 27.7835 13.38 27.7835 15.6917V25.8751H22.4752V16.4095C22.4752 15.2437 22.1726 14.3375 21.5692 13.6924C20.9658 13.0475 20.1524 12.7234 19.134 12.7234C18.1157 12.7234 17.3023 13.0459 16.6989 13.6924C16.0954 14.3375 15.7929 15.2437 15.7929 16.4095V25.8751H10.4531V8.4437H15.7929V10.7555C16.3335 9.98493 17.0625 9.37639 17.9784 8.92824C18.8943 8.48009 19.9243 8.25684 21.0699 8.25684C23.1099 8.25684 24.74 8.9183 25.9567 10.2396V10.2412Z" fill="#2668FD"/>
+                    </g>
+                    <defs>
+                    <clipPath id="clip0_345_379">
+                    <rect width="27.92" height="26.6388" fill="white"/>
+                    </clipPath>
+                    </defs>
+                    </svg>
+                </div>
+            </a>
+            <a href="" style="width: fit-content; float: left; margin-left: 0.15vw;">
+                <div style="height: 3.5vw; width: 3.5vw; border-radius: 100%; background-color: #FFCCCD; display: flex; justify-content: center; align-items: center;">
+                    <svg style="width: 1.25vw;" viewBox="0 0 34 31" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <g clip-path="url(#clip0_345_383)">
+                    <path d="M24.7561 0H8.99972C4.64672 0 1.10547 3.54231 1.10547 7.89657V22.3157C1.10547 26.6698 4.64672 30.2122 8.99972 30.2122H24.7561C29.109 30.2122 32.6504 26.6698 32.6504 22.3157V7.89657C32.6504 3.54231 29.109 0 24.7561 0ZM3.89031 7.89657C3.89031 5.07878 6.18276 2.78566 8.99972 2.78566H24.7561C27.5731 2.78566 29.8655 5.07878 29.8655 7.89657V22.3157C29.8655 25.1334 27.5731 27.4266 24.7561 27.4266H8.99972C6.18276 27.4266 3.89031 25.1334 3.89031 22.3157V7.89657Z" fill="#2668FD"/>
+                    <path d="M16.8782 22.4501C20.9261 22.4501 24.2211 19.1558 24.2211 15.105C24.2211 11.054 20.9279 7.75977 16.8782 7.75977C12.8284 7.75977 9.53516 11.054 9.53516 15.105C9.53516 19.1558 12.8284 22.4501 16.8782 22.4501ZM16.8782 10.5472C19.3918 10.5472 21.4363 12.5923 21.4363 15.1067C21.4363 17.6211 19.3918 19.6662 16.8782 19.6662C14.3645 19.6662 12.32 17.6211 12.32 15.1067C12.32 12.5923 14.3645 10.5472 16.8782 10.5472Z" fill="#2668FD"/>
+                    <path d="M24.9001 8.9449C25.99 8.9449 26.8782 8.05809 26.8782 6.9661C26.8782 5.87411 25.9917 4.9873 24.9001 4.9873C23.8084 4.9873 22.9219 5.87411 22.9219 6.9661C22.9219 8.05809 23.8084 8.9449 24.9001 8.9449Z" fill="#2668FD"/>
+                    </g>
+                    <defs>
+                    <clipPath id="clip0_345_383">
+                    <rect width="33.02" height="30.4729" fill="white"/>
+                    </clipPath>
+                    </defs>
+                    </svg>
+                </div>
+            </a>
+            <a href="" style="width: fit-content; float: left; margin-left: 0.15vw;">
+                <div style="height: 3.5vw; width: 3.5vw; border-radius: 100%; background-color: #FFCCCD; display: flex; justify-content: center; align-items: center;">
+                    <svg style="width: 1.25vw; height:1.25vw;" viewBox="0 0 17 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <g clip-path="url(#clip0_345_388)">
+                    <path d="M11.1336 7.25727V11.5933H16.496L15.6468 17.4342H11.1336V30.8914C10.2287 31.0168 9.30293 31.0824 8.36319 31.0824C7.27846 31.0824 6.21324 30.996 5.17591 30.8286V17.4342H0.230469V11.5933H5.17591V6.28798C5.17591 2.99656 7.84313 0.327148 11.135 0.327148V0.329941C11.1447 0.329941 11.1531 0.327148 11.1629 0.327148H16.4972V5.37866H13.0116C11.9757 5.37866 11.135 6.21965 11.135 7.25589L11.1336 7.25727Z" fill="#2668FD"/>
+                    </g>
+                    <defs>
+                    <clipPath id="clip0_345_388">
+                    <rect width="16.5" height="31.7188" fill="white"/>
+                    </clipPath>
+                    </defs>
+                    </svg>
+                </div>
+            </a>
+            <a href="" style="width: fit-content; float: left; margin-left: 0.15vw; text-decoration: none;">
+                <div style="width: fit-content; height: 3.5vw; padding: 0 1vw; border-radius: 1.5vw; background-color: #F61F1F; display: flex; justify-content: center; align-items: center;">
+                    <p style="color: #FFF9E7; font-family: DxKordExp; font-size: 1.75vw; margin: 0; font-weight: 100; margin-top: 0.25vw;">Get started</p>
+                </div>
+            </a>
+            
+
+        </div>
+
+        <div style="position: absolute; height: auto; width: 15vw; bottom: 5vw; right: 10vw;">
+            <a href="" style="text-decoration:underline;">
+                <p style="margin:0.25vw 0 0 0; color: #181819; text-align: end;">Set Cookie preferences</p>
+            </a>
+            <a href="" style="text-decoration:underline;">
+                <p style="margin:0.25vw 0 0 0; color: #181819; text-align: end;">Terms & Conditions</p>
+            </a>
+            <a href="" style="text-decoration:underline;">
+                <p style="margin:0.25vw 0 0 0; color: #181819; text-align: end;">Appeals & Complaints</p>
+            </a>
+            <p style="margin:0.5vw 0; color: #1818198a; text-align: end;">2026 @ LE LABO</p>
+
+        </div>
+
+        <p style="position: absolute; bottom: 0.5vw; left: 0.5vw; color: #F61F1F; font-family: DxKord; font-size: 15vw; margin: 0 0 -4vw 0; width: fit-content;">
+            LE LABO
+        </p>
+    </footer>
     
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.1/dist/gsap.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.1/dist/ScrollTrigger.min.js"></script>
